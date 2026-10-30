@@ -76,7 +76,7 @@
     <div class="bg-orange-500 text-dark-950 text-xs sm:text-sm font-semibold py-1.5 px-4 text-center flex justify-between items-center max-w-full">
         <span class="mx-auto flex items-center gap-2">
             <i class="fa-solid fa-cross text-xs"></i>
-            <span>NEW ALBUM RELEASE: <strong>"Grace Beyond Measure"</strong> out now in Lusaka & Worldwide!</span>
+            <span>NEW ALBUM RELEASE: <strong>"Ifisabo 'The Fruit'"</strong> out now in Lusaka & Worldwide!</span>
         </span>
         <div class="hidden md:flex items-center gap-3 text-xs pr-4">
             <span>Currency:</span>
@@ -206,11 +206,11 @@
                                 </div>
                             </div>
                             <span class="text-xs font-bold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3 py-1 rounded-full mb-2">Featured Release</span>
-                            <h3 class="text-2xl font-serif font-bold text-white mb-1">Grace Beyond Measure</h3>
-                            <p class="text-zinc-400 text-xs mb-4">12 Worship & Praise Tracks</p>
+                            <h3 class="text-2xl font-serif font-bold text-white mb-1">Ifisabo "The Fruit"</h3>
+                            <p class="text-zinc-400 text-xs mb-4">Volume 5 &bull; Worship & Praise</p>
                             
                             <!-- Quick sample trigger -->
-                            <button onclick="playTrackSample('t1', 'Grace Beyond Measure', 'Phillip Lisomona', 'Grace Beyond Measure Album')" class="orange-gradient-bg text-dark-950 px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-md">
+                            <button onclick="playTrackSample('t1-1', 'Ifisabo (The Fruit)', 'Phillip Lisomona', 'Ifisabo \'The Fruit\' Album')" class="orange-gradient-bg text-dark-950 px-5 py-2.5 rounded-full text-xs font-bold flex items-center gap-2 hover:scale-105 transition-transform shadow-md">
                                 <i class="fa-solid fa-play"></i>
                                 <span>Listen to Sample</span>
                             </button>
@@ -492,7 +492,7 @@
 
             <div id="checkout-form-container">
                 <h3 class="text-2xl font-serif font-bold text-white mb-1">Buy Music Track</h3>
-                <p id="checkout-item-name" class="text-xs text-orange-400 font-bold mb-4">Item: Grace Beyond Measure</p>
+                <p id="checkout-item-name" class="text-xs text-orange-400 font-bold mb-4">Item: Ifisabo "The Fruit"</p>
 
                 <form onsubmit="handleDirectPurchase(event)" class="space-y-4">
                     <div>
@@ -646,22 +646,22 @@
 
     <!-- JAVASCRIPT APPLICATION LOGIC -->
     <script>
-        // Global Music Catalog Data with MediaFire Links
+        // Global Music Catalog Data with Direct MediaFire Link for Album 1
         const musicCatalog = {
             albums: [
                 {
                     id: "alb-1",
-                    title: "Grace Beyond Measure",
+                    title: "Ifisabo \"The Fruit\"",
                     year: "2025",
                     coverGradient: "from-orange-600 via-amber-700 to-zinc-950",
                     priceZmw: 150,
                     priceUsd: 10,
-                    zipLink: "https://www.mediafire.com/file/example_grace_beyond_measure_album.zip/file",
+                    zipLink: "https://www.mediafire.com/file/vjhwqn87n2gijs9/Pillip_Lisomona_Volume_5.zip/file",
                     tracks: [
-                        { id: "t1-1", title: "Grace Beyond Measure (Intro)", duration: "3:45", priceZmw: 15, priceUsd: 1, freq: 320, zipLink: "https://www.mediafire.com/file/example_track1.zip/file" },
-                        { id: "t1-2", title: "Lusaka Worship Medley", duration: "5:20", priceZmw: 15, priceUsd: 1, freq: 440, zipLink: "https://www.mediafire.com/file/example_track2.zip/file" },
-                        { id: "t1-3", title: "He Has Changed My Story", duration: "4:10", priceZmw: 15, priceUsd: 1, freq: 520, zipLink: "https://www.mediafire.com/file/example_track3.zip/file" },
-                        { id: "t1-4", title: "Nalishiba (I Know You Lord)", duration: "4:50", priceZmw: 15, priceUsd: 1, freq: 360, zipLink: "https://www.mediafire.com/file/example_track4.zip/file" }
+                        { id: "t1-1", title: "Ifisabo (The Fruit)", duration: "3:45", priceZmw: 15, priceUsd: 1, freq: 320, zipLink: "https://www.mediafire.com/file/vjhwqn87n2gijs9/Pillip_Lisomona_Volume_5.zip/file" },
+                        { id: "t1-2", title: "Lusaka Worship Medley", duration: "5:20", priceZmw: 15, priceUsd: 1, freq: 440, zipLink: "https://www.mediafire.com/file/vjhwqn87n2gijs9/Pillip_Lisomona_Volume_5.zip/file" },
+                        { id: "t1-3", title: "He Has Changed My Story", duration: "4:10", priceZmw: 15, priceUsd: 1, freq: 520, zipLink: "https://www.mediafire.com/file/vjhwqn87n2gijs9/Pillip_Lisomona_Volume_5.zip/file" },
+                        { id: "t1-4", title: "Nalishiba (I Know You Lord)", duration: "4:50", priceZmw: 15, priceUsd: 1, freq: 360, zipLink: "https://www.mediafire.com/file/vjhwqn87n2gijs9/Pillip_Lisomona_Volume_5.zip/file" }
                     ]
                 },
                 {
