@@ -94,36 +94,25 @@
 <div class="player" id="player"><div class="player-info"><b id="nowTitle">Now playing</b><span id="nowAlbum">Phillip Lisomona</span></div><audio id="audioPlayer" controls preload="none"></audio><button class="close-player" id="closePlayer" aria-label="Close player">×</button></div>
 
 <script>
-/*
-  MUSIC SETUP:
-  1. Add your album/single details in the music array below.
-  2. Put audio files in a folder named "audio" beside this HTML file.
-  3. Replace each sample value with its audio path, e.g. "audio/song-preview.mp3".
-  4. Add cover artwork by setting coverImage to "images/album-cover.jpg".
-  5. For a full song purchase/download, add your own store/payment link in the item data and create a purchase link in renderMusic().
-*/
 const music = [
   {
-    id: "album-1", type: "album", title: "Your Album Title", year: "2026",
-    description: "Add a short description of this gospel album.",
-    coverImage: "", tracks: [
-      { title: "Track One", sample: "" },
-      { title: "Track Two", sample: "" },
-      { title: "Track Three", sample: "" }
-    ]
-  },
-  {
-    id: "single-1", type: "single", title: "Your Single Title", year: "2026",
-    description: "Add a description for your single release.",
-    coverImage: "", tracks: [
-      { title: "Single Track", sample: "" }
-    ]
-  },
-  {
-    id: "single-2", type: "single", title: "Another Single", year: "2026",
-    description: "Add another single when it is ready for release.",
-    coverImage: "", tracks: [
-      { title: "Song Sample", sample: "" }
+    id: "album-1",
+    type: "album",
+    albumTitle: "Phillip Lisomona Volume 5", // Album title tag
+    year: "2026",
+    description: "A powerful gospel collection of praise, worship, encouragement, and spiritual reflection.",
+    artwork: "images/phillip-lisomona-volume-5.png", // png artwork tag
+    tracks: [
+      { trackTitle: "Libizo", mp3: "audio/Phillip Lisomona_Libizo.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Takuli Kubota", mp3: "audio/Phillip Lisomona_Takuli Kubota.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Tuli Fimuti", mp3: "audio/Phillip Lisomona_Tuli fimuti.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Tuyoomubona", mp3: "audio/Phillip Lisomona_Tuyoomubona.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Adam", mp3: "audio/Phillip-Lisomona_Adam.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Atunyamuke", mp3: "audio/Phillip-Lisomona_Atunyamuke.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Bulumbu", mp3: "audio/Phillip-Lisomona_Bulumbu.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Ft. Nachambwa Aleisa", mp3: "audio/Phillip-Lisomona-ft-Nachambwa_Aleisa.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Ico Nyimbila", mp3: "audio/Phillip_Lisomona_Ico nyimbila.mp3" }, // Track title & mp3 tag
+      { trackTitle: "Tutamutami", mp3: "audio/Phillip_Lisomona_Tutamutami.mp3" } // Track title & mp3 tag
     ]
   }
 ];
@@ -132,26 +121,40 @@ const grid = document.getElementById("musicGrid");
 const player = document.getElementById("player");
 const audio = document.getElementById("audioPlayer");
 function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function getAlbumTitle(item){return item.albumTitle || item.title || "Untitled Album";}
+function getArtwork(item){return item.artwork || item.coverImage || "";}
+function getTrackTitle(track){return track.trackTitle || track.title || "Untitled Track";}
+function getTrackMp3(track){return track.mp3 || track.sample || "";}
 function renderMusic(filter="all"){
   const items = music.filter(item => filter==="all" || item.type===filter);
-  grid.innerHTML = items.map(item => `
+  grid.innerHTML = items.map(item => {
+    const albumTitle = getAlbumTitle(item);
+    const artwork = getArtwork(item);
+    return `
     <article class="music-card">
-      <div class="cover" ${item.coverImage ? `style="background-image:linear-gradient(#080e1b22,#080e1b66),url('${escapeHTML(item.coverImage)}');background-size:cover;background-position:center"` : ""}>
-        ${item.coverImage ? "" : `<div class="cover-art"><b>${escapeHTML(item.title)}</b><span>PHILLIP LISOMONA</span><small>${escapeHTML(item.type==="album"?"OFFICIAL ALBUM":"OFFICIAL SINGLE")} · ${escapeHTML(item.year)}</small></div>`}
+      <div class="cover" ${artwork ? `style="background-image:linear-gradient(#080e1b22,#080e1b66),url('${escapeHTML(artwork)}');background-size:cover;background-position:center"` : ""}>
+        ${artwork ? "" : `<div class="cover-art"><b>${escapeHTML(albumTitle)}</b><span>PHILLIP LISOMONA</span><small>${escapeHTML(item.type==="album"?"OFFICIAL ALBUM":"OFFICIAL SINGLE")} · ${escapeHTML(item.year)}</small></div>`}
       </div>
-      <div class="card-body"><div class="type">${item.type==="album"?"Album":"Single"} · ${escapeHTML(item.year)}</div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.description)}</p>
-        <div class="track-list">${item.tracks.map((track,index)=>`
-          <div class="track"><span class="track-name">${String(index+1).padStart(2,"0")}. ${escapeHTML(track.title)}</span>
-          <button type="button" aria-label="Play ${escapeHTML(track.title)}" title="${track.sample?"Play sample":"Add an audio sample path in the music data"}" onclick="playTrack('${escapeHTML(item.id)}',${index})">▶</button></div>`).join("")}
+      <div class="card-body"><div class="type">${item.type==="album"?"Album":"Single"} · ${escapeHTML(item.year)}</div><h3>${escapeHTML(albumTitle)}</h3><p>${escapeHTML(item.description)}</p>
+        <div class="track-list">${item.tracks.map((track,index)=>{
+          const trackTitle = getTrackTitle(track);
+          const mp3 = getTrackMp3(track);
+          return `
+          <div class="track"><span class="track-name">${String(index+1).padStart(2,"0")}. ${escapeHTML(trackTitle)}</span>
+          <button type="button" aria-label="Play ${escapeHTML(trackTitle)}" title="${mp3?"Play sample":""}" onclick="playTrack('${escapeHTML(item.id)}',${index})">▶</button></div>`;
+        }).join("")}
         </div>
       </div>
-    </article>`).join("");
+    </article>`;
+  }).join("");
 }
 function playTrack(id,index){
   const item=music.find(x=>x.id===id); const track=item?.tracks[index];
-  if(!track || !track.sample){alert("This song sample has not been uploaded yet. Add its MP3 file path in the music list in this HTML file.");return;}
-  audio.src=track.sample; document.getElementById("nowTitle").textContent=track.title;
-  document.getElementById("nowAlbum").textContent=item.title; player.classList.add("show");
+  const mp3 = track ? getTrackMp3(track) : "";
+  const trackTitle = track ? getTrackTitle(track) : "Untitled Track";
+  if(!track || !mp3){alert("Audio sample path missing.");return;}
+  audio.src=mp3; document.getElementById("nowTitle").textContent=trackTitle;
+  document.getElementById("nowAlbum").textContent=getAlbumTitle(item); player.classList.add("show");
   audio.play().catch(()=>{});
 }
 document.querySelectorAll(".tab").forEach(button=>button.addEventListener("click",()=>{
