@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phillip Lisomona Music | Official Website</title>
-<meta name="description" content="Listen to gospel albums and singles by Phillip Lisomona, gospel musician and producer from Lusaka, Zambia.">
+<meta name="description" content="Official gospel music website of Phillip Lisomona, musician, producer and entrepreneur based in Lusaka, Zambia.">
 
 <style>
 :root{
@@ -17,197 +17,478 @@
  --grey:#aaa;
 }
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
- background:var(--black);color:var(--white);
- font-family:Arial,sans-serif;line-height:1.6;
- padding-bottom:100px;
+ background:var(--black);
+ color:var(--white);
+ font-family:Arial,Helvetica,sans-serif;
+ line-height:1.6;
+ padding-bottom:95px;
 }
 button,input,textarea{font:inherit}
 button{cursor:pointer}
-a{color:inherit;text-decoration:none}
+a{text-decoration:none;color:inherit}
 .container{width:92%;max-width:1200px;margin:auto}
+
+/* HEADER */
+
 header{
- background:#090909;border-bottom:1px solid #292929;
- position:sticky;top:0;z-index:100;
+ background:#090909;
+ border-bottom:1px solid #292929;
+ position:sticky;
+ top:0;
+ z-index:100;
 }
 .nav{
- min-height:75px;display:flex;
- justify-content:space-between;align-items:center;
+ min-height:75px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
 }
-.logo{font-weight:900;font-size:21px}
+.logo{
+ font-size:21px;
+ font-weight:900;
+ letter-spacing:1px;
+}
 .logo span{color:var(--orange)}
-.navlinks{display:flex;gap:25px}
-.navlinks a{font-size:14px;color:#ddd}
+.navlinks{
+ display:flex;
+ align-items:center;
+ gap:25px;
+}
+.navlinks a{
+ color:#ddd;
+ font-size:14px;
+}
 .navlinks a:hover{color:var(--orange)}
-.menu{display:none;background:none;color:white;border:0;font-size:27px}
+.menu{
+ display:none;
+ background:none;
+ border:0;
+ color:white;
+ font-size:28px;
+}
+
+/* HERO */
 
 .hero{
- min-height:480px;display:flex;align-items:center;
- background:linear-gradient(90deg,#080808 5%,rgba(8,8,8,.85) 60%,rgba(8,8,8,.3)),
+ min-height:510px;
+ display:flex;
+ align-items:center;
+ background:
+ linear-gradient(90deg,#080808 5%,rgba(8,8,8,.88) 60%,rgba(8,8,8,.35)),
  linear-gradient(0deg,#080808,transparent),
  radial-gradient(circle at 75% 40%,#783400,#17100c 50%,#080808);
 }
-.hero-content{padding:85px 0;max-width:700px}
-.tag{
- color:var(--orange);border:1px solid var(--orange);
- padding:6px 14px;border-radius:30px;
- display:inline-block;font-size:12px;letter-spacing:2px;
+.hero-content{
+ max-width:700px;
+ padding:85px 0;
 }
-.hero h1{font-size:clamp(42px,7vw,75px);line-height:1.1;margin:20px 0}
+.tag{
+ display:inline-block;
+ color:var(--orange);
+ border:1px solid var(--orange);
+ padding:7px 15px;
+ border-radius:30px;
+ font-size:12px;
+ letter-spacing:2px;
+}
+.hero h1{
+ font-size:clamp(42px,7vw,75px);
+ line-height:1.1;
+ margin:22px 0;
+}
 .orange{color:var(--orange)}
-.hero p{color:#ccc;font-size:17px;max-width:580px}
+.hero p{
+ color:#ccc;
+ font-size:17px;
+ max-width:580px;
+}
+.hero-actions{
+ display:flex;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:28px;
+}
 .btn{
- display:inline-block;border:0;border-radius:5px;
- padding:12px 22px;font-weight:bold;
- background:var(--orange);color:white;
+ display:inline-block;
+ padding:12px 23px;
+ border-radius:5px;
+ border:1px solid var(--orange);
+ background:var(--orange);
+ color:white;
+ font-weight:bold;
 }
 .btn:hover{background:#df5e00}
-.outline{background:transparent;border:1px solid var(--orange)}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn-outline{background:transparent}
+
+/* SECTIONS */
 
 section{padding:65px 0}
 .section-title{margin-bottom:28px}
 .section-title h2{font-size:31px}
-.section-title p{color:var(--grey);font-size:14px}
-.underline{height:4px;width:55px;background:var(--orange);margin-top:9px}
+.section-title p{
+ color:var(--grey);
+ font-size:14px;
+ margin-top:5px;
+}
+.underline{
+ height:4px;
+ width:55px;
+ background:var(--orange);
+ margin-top:9px;
+}
+
+/* MUSIC CARDS */
 
 .music-grid{
- display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
  gap:22px;
 }
 .music-card{
- background:var(--card);border:1px solid #292929;
- border-radius:9px;overflow:hidden;transition:.25s;
+ background:var(--card);
+ border:1px solid #292929;
+ border-radius:9px;
+ overflow:hidden;
+ transition:.25s;
 }
-.music-card:hover{transform:translateY(-5px);border-color:var(--orange)}
+.music-card:hover{
+ transform:translateY(-5px);
+ border-color:var(--orange);
+}
 .cover{
- aspect-ratio:1;background:linear-gradient(135deg,#41200c,#151515);
- display:flex;align-items:center;justify-content:center;
- overflow:hidden;color:var(--orange);font-size:25px;font-weight:900;
- text-align:center;padding:15px;
+ aspect-ratio:1;
+ background:linear-gradient(135deg,#48200a,#151515);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ overflow:hidden;
+ color:var(--orange);
+ font-size:23px;
+ font-weight:900;
+ text-align:center;
+ padding:15px;
 }
-.cover img{width:100%;height:100%;object-fit:cover}
+.cover img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
 .music-info{padding:16px}
 .music-info h3{font-size:17px}
-.music-info p{font-size:13px;color:var(--grey)}
-.card-buttons{display:flex;gap:8px;margin-top:13px}
+.music-info p{
+ font-size:13px;
+ color:var(--grey);
+}
+.card-buttons{
+ display:flex;
+ gap:8px;
+ margin-top:14px;
+}
 .card-buttons button{
- flex:1;border:0;border-radius:4px;padding:10px 5px;
- font-size:12px;font-weight:bold;
+ flex:1;
+ border:0;
+ border-radius:4px;
+ padding:10px 5px;
+ font-size:12px;
+ font-weight:bold;
 }
 .play{background:var(--orange);color:white}
 .secondary{background:#333;color:white}
+.card-buttons button:hover{opacity:.8}
+
 .empty{
- padding:35px;text-align:center;background:#141414;
- border:1px dashed #555;border-radius:8px;color:#aaa;
+ padding:30px;
+ text-align:center;
+ background:#141414;
+ border:1px dashed #555;
+ border-radius:8px;
+ color:#aaa;
  grid-column:1/-1;
 }
 
+/* SINGLES */
+
+.single-label{
+ display:inline-block;
+ font-size:10px;
+ color:var(--orange);
+ border:1px solid #733800;
+ border-radius:20px;
+ padding:3px 9px;
+ margin-bottom:7px;
+}
+
+/* TRACK LIST */
+
 .tracks-section{background:#111}
 .track{
- display:flex;align-items:center;justify-content:space-between;
- padding:14px 15px;border-bottom:1px solid #303030;gap:12px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ padding:14px 15px;
+ border-bottom:1px solid #303030;
+ gap:12px;
 }
 .track:hover{background:#1b1b1b}
-.track-info{display:flex;align-items:center;gap:13px;min-width:0}
-.track-num{color:var(--orange);font-weight:bold}
-.track-name{font-weight:bold;overflow-wrap:anywhere}
-.track-sub{font-size:12px;color:#999}
+.track-info{
+ display:flex;
+ align-items:center;
+ gap:13px;
+ min-width:0;
+}
+.track-num{
+ color:var(--orange);
+ font-weight:bold;
+}
+.track-name{
+ font-weight:bold;
+ overflow-wrap:anywhere;
+}
+.track-sub{
+ color:#999;
+ font-size:12px;
+}
+.track-actions{
+ display:flex;
+ gap:7px;
+}
 .track button{
- border:0;background:var(--orange);color:white;
- border-radius:4px;padding:8px 13px;
+ border:0;
+ background:var(--orange);
+ color:white;
+ border-radius:4px;
+ padding:8px 13px;
+ font-size:12px;
 }
-.about{
- display:grid;grid-template-columns:1fr 1fr;
- gap:40px;align-items:center;
-}
-.about-photo{
- min-height:320px;border-radius:10px;
- display:flex;align-items:center;justify-content:center;
- background:linear-gradient(135deg,#693000,#151515);
- color:var(--orange);font-size:30px;font-weight:bold;
- overflow:hidden;
-}
-.about-photo img{width:100%;height:100%;object-fit:cover}
-.about p{color:#bbb;margin:15px 0}
-.contact{
- text-align:center;background:linear-gradient(135deg,#301500,#080808);
-}
-.contact p{color:#bbb;margin:12px 0 25px}
-.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.contact-links a{padding:11px 18px;border:1px solid #555;border-radius:5px}
-.contact-links a:hover{background:var(--orange)}
+.track .preview-btn{background:#333}
 
-footer{text-align:center;padding:30px;color:#999;font-size:13px}
+/* SEARCH */
 
-/* ADMIN */
-.admin-section{background:#101010;border-top:2px solid var(--orange)}
-.admin-box{
- background:#191919;border:1px solid #333;
- padding:22px;border-radius:9px;
-}
-.admin-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
-.tab{
- padding:10px 17px;border:1px solid #555;
- background:#222;color:white;border-radius:5px;
-}
-.tab.active{background:var(--orange);border-color:var(--orange)}
-.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.field{display:flex;flex-direction:column;gap:6px}
-.field.full{grid-column:1/-1}
-.field label{font-size:13px;color:#ddd}
-.field input,.field textarea{
- width:100%;background:#090909;color:white;
- border:1px solid #444;border-radius:5px;padding:12px;
-}
-.field input[type=file]{padding:9px}
-.field textarea{min-height:85px;resize:vertical}
-.field input:focus,.field textarea:focus{outline:1px solid var(--orange)}
-.help{font-size:12px;color:#aaa}
-.admin-list{margin-top:25px}
-.admin-item{
- display:flex;align-items:center;justify-content:space-between;
- gap:10px;padding:13px;border-bottom:1px solid #333;
-}
-.admin-item button{
- background:#a52b1e;color:white;border:0;
- padding:8px 12px;border-radius:4px;
-}
-.notice{
- background:#30200e;border:1px solid #9b5300;
- padding:13px;border-radius:6px;margin:15px 0;
- font-size:13px;color:#ffd6ae;
-}
-.hidden{display:none!important}
 #search{
- background:#151515;color:white;border:1px solid #444;
- padding:12px;border-radius:5px;width:100%;max-width:400px;
+ background:#151515;
+ color:white;
+ border:1px solid #444;
+ padding:12px;
+ border-radius:5px;
+ width:100%;
+ max-width:430px;
  margin-bottom:20px;
 }
+#search:focus{outline:1px solid var(--orange)}
+
+/* ABOUT */
+
+.about{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:40px;
+ align-items:center;
+}
+.about-photo{
+ min-height:330px;
+ border-radius:10px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ background:linear-gradient(135deg,#693000,#151515);
+ color:var(--orange);
+ font-size:30px;
+ font-weight:bold;
+ overflow:hidden;
+}
+.about-photo img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
+.about p{
+ color:#bbb;
+ margin:15px 0;
+}
+
+/* CONTACT */
+
+.contact{
+ text-align:center;
+ background:linear-gradient(135deg,#301500,#080808);
+ border-top:1px solid #332013;
+}
+.contact p{
+ color:#bbb;
+ margin:12px 0 25px;
+}
+.contact-links{
+ display:flex;
+ justify-content:center;
+ gap:12px;
+ flex-wrap:wrap;
+}
+.contact-links a{
+ padding:11px 18px;
+ border:1px solid #555;
+ border-radius:5px;
+}
+.contact-links a:hover{
+ background:var(--orange);
+ border-color:var(--orange);
+}
+
+/* ADMIN */
+
+.admin-section{
+ background:#101010;
+ border-top:2px solid var(--orange);
+}
+.admin-box{
+ background:#191919;
+ border:1px solid #333;
+ padding:22px;
+ border-radius:9px;
+}
+.admin-tabs{
+ display:flex;
+ gap:9px;
+ flex-wrap:wrap;
+ margin-bottom:20px;
+}
+.tab{
+ padding:10px 17px;
+ border:1px solid #555;
+ background:#222;
+ color:white;
+ border-radius:5px;
+}
+.tab.active{
+ background:var(--orange);
+ border-color:var(--orange);
+}
+.admin-form{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:15px;
+}
+.field{
+ display:flex;
+ flex-direction:column;
+ gap:6px;
+}
+.field.full{grid-column:1/-1}
+.field label{
+ font-size:13px;
+ color:#ddd;
+}
+.field input,.field textarea{
+ width:100%;
+ background:#090909;
+ color:white;
+ border:1px solid #444;
+ border-radius:5px;
+ padding:12px;
+}
+.field textarea{
+ min-height:85px;
+ resize:vertical;
+}
+.help{
+ font-size:12px;
+ color:#aaa;
+}
+.notice{
+ background:#30200e;
+ border:1px solid #9b5300;
+ padding:13px;
+ border-radius:6px;
+ margin:15px 0;
+ font-size:13px;
+ color:#ffd6ae;
+}
+.admin-list{margin-top:20px}
+.admin-item{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:12px;
+ padding:13px;
+ border-bottom:1px solid #333;
+}
+.admin-item button{
+ background:#a52b1e;
+ color:white;
+ border:0;
+ padding:8px 12px;
+ border-radius:4px;
+}
+.hidden{display:none!important}
+
+/* PLAYER */
+
 .player{
- position:fixed;bottom:0;left:0;width:100%;
- background:#171717;border-top:3px solid var(--orange);
- padding:12px 4%;z-index:200;
- display:none;align-items:center;justify-content:space-between;gap:15px;
+ position:fixed;
+ bottom:0;
+ left:0;
+ width:100%;
+ background:#171717;
+ border-top:3px solid var(--orange);
+ padding:12px 4%;
+ z-index:200;
+ display:none;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
 }
 .player-info{min-width:120px}
 .player-info strong{display:block}
 .player-info small{color:#aaa}
-.player audio{width:48%;max-width:500px}
-.player button{background:none;border:0;color:white;font-size:23px}
-.player-controls{display:flex;align-items:center;gap:10px}
+.player audio{
+ width:45%;
+ max-width:500px;
+}
+.player-controls{
+ display:flex;
+ align-items:center;
+ gap:10px;
+}
+.player-controls button{
+ background:none;
+ border:0;
+ color:white;
+ font-size:22px;
+}
+.player-controls button:hover{color:var(--orange)}
+
+footer{
+ text-align:center;
+ padding:30px;
+ color:#999;
+ font-size:13px;
+}
+
 @media(max-width:700px){
  .menu{display:block}
  .navlinks{
-  display:none;position:absolute;top:75px;left:0;width:100%;
-  background:#111;padding:20px;flex-direction:column;gap:15px;
+  display:none;
+  position:absolute;
+  top:75px;
+  left:0;
+  width:100%;
+  background:#111;
+  padding:20px;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:17px;
  }
  .navlinks.show{display:flex}
  .about{grid-template-columns:1fr}
  .admin-form{grid-template-columns:1fr}
  .field.full{grid-column:auto}
  .player{flex-wrap:wrap}
- .player audio{width:100%;max-width:none;order:3}
+ .player audio{
+  width:100%;
+  max-width:none;
+  order:3;
+ }
  .player-info{flex:1}
 }
 </style>
@@ -215,14 +496,19 @@ footer{text-align:center;padding:30px;color:#999;font-size:13px}
 
 <body>
 
+<!-- HEADER -->
+
 <header>
  <div class="container nav">
   <a class="logo" href="#home">PHILLIP <span>LISOMONA</span></a>
+
   <button class="menu" onclick="toggleMenu()">☰</button>
+
   <nav class="navlinks" id="navlinks">
    <a href="#home" onclick="closeMenu()">Home</a>
    <a href="#albums" onclick="closeMenu()">Albums</a>
    <a href="#singles" onclick="closeMenu()">Singles</a>
+   <a href="#popular" onclick="closeMenu()">Music Library</a>
    <a href="#about" onclick="closeMenu()">About</a>
    <a href="#contact" onclick="closeMenu()">Contact</a>
    <a href="#admin" onclick="closeMenu()">Admin</a>
@@ -230,656 +516,1368 @@ footer{text-align:center;padding:30px;color:#999;font-size:13px}
  </div>
 </header>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
  <div class="container hero-content">
   <span class="tag">OFFICIAL MUSIC PLATFORM</span>
-  <h1>WELCOME TO<br><span class="orange">MY MUSIC</span></h1>
+
+  <h1>
+   WELCOME TO<br>
+   <span class="orange">MY MUSIC</span>
+  </h1>
+
   <p>
    Experience inspiring gospel music from Phillip Lisomona.
    Discover albums, singles and uplifting songs that glorify God.
   </p>
+
   <div class="hero-actions">
    <a href="#albums" class="btn">Explore Albums</a>
-   <a href="#singles" class="btn outline">Listen to Singles</a>
+   <a href="#singles" class="btn btn-outline">Listen to Singles</a>
   </div>
  </div>
 </section>
 
+<!-- ALBUMS -->
+
 <section id="albums">
  <div class="container">
+
   <div class="section-title">
    <h2>Featured <span class="orange">Albums</span></h2>
    <div class="underline"></div>
    <p>Discover gospel albums and their tracks.</p>
   </div>
+
   <div class="music-grid" id="albumGrid"></div>
+
  </div>
 </section>
+
+<!-- SINGLES -->
 
 <section id="singles" style="background:#111">
  <div class="container">
+
   <div class="section-title">
    <h2>Latest <span class="orange">Singles</span></h2>
    <div class="underline"></div>
-   <p>Listen to individual gospel releases.</p>
+   <p>Listen to individual gospel releases by Phillip Lisomona.</p>
   </div>
+
   <div class="music-grid" id="singleGrid"></div>
+
  </div>
 </section>
+
+<!-- MUSIC LIBRARY -->
 
 <section class="tracks-section" id="popular">
  <div class="container">
+
   <div class="section-title">
    <h2>Music <span class="orange">Library</span></h2>
    <div class="underline"></div>
-   <p>Search and play available music.</p>
+   <p>Search and listen to your favourite gospel songs.</p>
   </div>
-  <input id="search" type="search" placeholder="Search songs or albums..." oninput="renderTracks()">
+
+  <input
+   id="search"
+   type="search"
+   placeholder="Search songs or albums..."
+   oninput="renderTracks()"
+  >
+
   <div id="trackList"></div>
+
  </div>
 </section>
 
+<!-- ABOUT -->
+
 <section id="about">
  <div class="container about">
+
   <div class="about-photo" id="artistPhoto">
    PHILLIP LISOMONA
   </div>
+
   <div>
+
    <div class="section-title">
     <h2>About <span class="orange">The Artist</span></h2>
     <div class="underline"></div>
    </div>
+
    <p>
     Phillip Lisomona is a renowned gospel musician of the
     Seventh-day Adventist Church based in Lusaka, Zambia.
    </p>
+
    <p>
     He is a gospel artist, music producer and entrepreneur
     passionate about using music to share messages of faith,
     hope and inspiration.
    </p>
-   <p>Welcome to his official music platform.</p>
+
+   <p>
+    Welcome to his official music platform, where you can
+    discover albums, listen to singles and enjoy uplifting
+    gospel music.
+   </p>
+
    <a class="btn" href="#contact">Contact Artist</a>
+
   </div>
  </div>
 </section>
 
+<!-- CONTACT -->
+
 <section class="contact" id="contact">
  <div class="container">
+
   <h2>Connect With <span class="orange">Phillip</span></h2>
+
   <p>Bookings, music enquiries and collaborations.</p>
+
   <div class="contact-links">
    <a href="tel:+260971132818">Call Artist</a>
-   <a href="https://wa.me/260971132818" target="_blank">WhatsApp</a>
-   <a href="mailto:philliplisomonamusic@gmail.com">Email</a>
-   <a href="https://www.facebook.com/Philliplisomona" target="_blank">Facebook</a>
+
+   <a href="https://wa.me/260971132818" target="_blank">
+    WhatsApp
+   </a>
+
+   <a href="mailto:philliplisomonamusic@gmail.com">
+    Email
+   </a>
+
+   <a href="https://www.facebook.com/Philliplisomona" target="_blank">
+    Facebook
+   </a>
   </div>
+
  </div>
 </section>
 
 <!-- ADMIN DASHBOARD -->
+
 <section class="admin-section" id="admin">
  <div class="container">
+
   <div class="section-title">
    <h2>Music <span class="orange">Admin Dashboard</span></h2>
    <div class="underline"></div>
-   <p>Upload and manage your music directly from this website.</p>
+   <p>Upload and manage albums and singles.</p>
   </div>
 
   <div class="notice">
-   Admin tools are local to this browser. This version has no
-   secure online administrator login or shared cloud database.
-   Do not use it as a public production admin system.
+   This is a browser-based administration system.
+   Uploaded music is stored locally in the browser.
+   A cloud backend and secure administrator authentication
+   are required for shared online uploads.
   </div>
 
   <div class="admin-box">
+
    <div class="admin-tabs">
-    <button class="tab active" id="albumTab" onclick="showForm('album')">Upload Album</button>
-    <button class="tab" id="singleTab" onclick="showForm('single')">Upload Single</button>
-    <button class="tab" id="manageTab" onclick="showForm('manage')">Manage Music</button>
+
+    <button class="tab active" id="albumTab"
+     onclick="showForm('album')">
+     Upload Album
+    </button>
+
+    <button class="tab" id="singleTab"
+     onclick="showForm('single')">
+     Upload Single
+    </button>
+
+    <button class="tab" id="manageTab"
+     onclick="showForm('manage')">
+     Manage Music
+    </button>
+
    </div>
 
-   <!-- ALBUM FORM -->
+   <!-- ALBUM UPLOAD -->
+
    <form id="albumForm" class="admin-form">
+
     <div class="field">
      <label>Album Title *</label>
-     <input id="albumTitle" required placeholder="Enter album name">
+     <input id="albumTitle" required placeholder="Album name">
     </div>
+
     <div class="field">
      <label>Release Year</label>
      <input id="albumYear" placeholder="2026">
     </div>
+
     <div class="field full">
      <label>Album Description</label>
-     <textarea id="albumDescription" placeholder="Album description"></textarea>
+     <textarea id="albumDescription"
+      placeholder="Album description"></textarea>
     </div>
+
     <div class="field full">
-     <label>Album Cover Image *</label>
-     <input id="albumCover" type="file" accept="image/*" required>
+     <label>Album Cover *</label>
+     <input id="albumCover" type="file"
+      accept="image/*" required>
     </div>
+
     <div class="field full">
      <label>Upload Album MP3 Tracks *</label>
-     <input id="albumTracks" type="file" accept="audio/mpeg,audio/*" multiple required>
-     <span class="help">Select multiple MP3 songs for this album.</span>
+     <input id="albumTracks" type="file"
+      accept="audio/*" multiple required>
+     <span class="help">You can select multiple tracks.</span>
     </div>
+
     <div class="field full">
-     <button class="btn" type="submit">Save Album & Tracks</button>
+     <button class="btn" type="submit">
+      Save Album & Tracks
+     </button>
     </div>
+
    </form>
 
-   <!-- SINGLE FORM -->
+   <!-- SINGLE UPLOAD -->
+
    <form id="singleForm" class="admin-form hidden">
+
     <div class="field full">
      <label>Song Title *</label>
-     <input id="singleTitle" required placeholder="Enter song title">
+     <input id="singleTitle" required
+      placeholder="Song title">
     </div>
+
     <div class="field full">
-     <label>Single Cover Image *</label>
-     <input id="singleCover" type="file" accept="image/*" required>
+     <label>Single Cover Image (Optional)</label>
+     <input id="singleCover" type="file"
+      accept="image/*">
     </div>
+
     <div class="field full">
-     <label>Upload MP3 Song *</label>
-     <input id="singleAudio" type="file" accept="audio/mpeg,audio/*" required>
+     <label>MP3 Song *</label>
+     <input id="singleAudio" type="file"
+      accept="audio/*" required>
     </div>
+
     <div class="field full">
-     <label>Description</label>
-     <textarea id="singleDescription" placeholder="Song description"></textarea>
+     <label>Song Description</label>
+     <textarea id="singleDescription"
+      placeholder="Song description"></textarea>
     </div>
+
     <div class="field full">
-     <button class="btn" type="submit">Save Single</button>
+     <button class="btn" type="submit">
+      Save Single
+     </button>
     </div>
+
    </form>
 
-   <!-- MANAGE FORM -->
+   <!-- MANAGE MUSIC -->
+
    <div id="manageForm" class="hidden">
+
     <h3>Uploaded Music</h3>
-    <p class="help">Delete albums or individual singles below.</p>
+
+    <p class="help">
+     Manage or delete uploaded albums and singles.
+    </p>
+
     <div class="admin-list" id="adminList"></div>
+
    </div>
+
   </div>
  </div>
 </section>
 
+<!-- FOOTER -->
+
 <footer>
  © <span id="year"></span> Phillip Lisomona Music.
  All Rights Reserved.
+ <br>Official Gospel Music Platform.
 </footer>
 
-<!-- FIXED PLAYER -->
+<!-- MUSIC PLAYER -->
+
 <div class="player" id="player">
+
  <div class="player-info">
   <strong id="nowPlaying">Now Playing</strong>
-  <small>Phillip Lisomona</small>
+  <small>Phillip Lisomona Music</small>
  </div>
+
  <div class="player-controls">
   <button onclick="previousTrack()" title="Previous">⏮</button>
   <button onclick="togglePlay()" id="playPause" title="Play/Pause">Ⅱ</button>
   <button onclick="nextTrack()" title="Next">⏭</button>
   <button onclick="closePlayer()" title="Close">×</button>
  </div>
+
  <audio id="audio" controls></audio>
+
 </div>
 
 <script>
-/* =================================
-   PHILLIP LISOMONA MUSIC DATABASE
-   IndexedDB stores uploaded files.
-================================= */
 
-const DB_NAME = "PhillipLisomonaMusic";
-const DB_VERSION = 1;
+/* =========================================
+   PHILLIP LISOMONA MUSIC
+   DATABASE AND MUSIC MANAGEMENT
+========================================= */
+
+const DB_NAME="PhillipLisomonaMusic";
+const DB_VERSION=1;
+
 let db;
-let currentQueue = [];
-let currentIndex = 0;
-let currentUrl = null;
-let previewMode = false;
-const audio = document.getElementById("audio");
+let currentQueue=[];
+let currentIndex=0;
+let currentUrl=null;
+let previewMode=false;
+
+const audio=document.getElementById("audio");
+
+/* =========================================
+   DEFAULT SINGLES
+   NINE TRACKS FROM GITHUB REPOSITORY
+========================================= */
+
+const defaultSingles=[
+
+ {
+  id:"default-adam",
+  title:"Adam",
+  file:"Phillip-Lisomona-Adam.mp3"
+ },
+
+ {
+  id:"default-atunyamuke",
+  title:"Atunyamuke",
+  file:"Phillip-Lisomona-Atunyamuke.mp3"
+ },
+
+ {
+  id:"default-bulumbu",
+  title:"Bulumbu",
+  file:"Phillip-Lisomona-Bulumbu.mp3"
+ },
+
+ {
+  id:"default-ico",
+  title:"Ico Nyimbila",
+  file:"Phillip-Lisomona-Ico-nyimbila.mp3"
+ },
+
+ {
+  id:"default-libizo",
+  title:"Libizo",
+  file:"Phillip-Lisomona-Libizo.mp3"
+ },
+
+ {
+  id:"default-takuli",
+  title:"Takuli Kubota",
+  file:"Phillip-Lisomona-Takuli-Kubota.mp3"
+ },
+
+ {
+  id:"default-tuli",
+  title:"Tuli Fimuti",
+  file:"Phillip-Lisomona-Tuli-fimuti.mp3"
+ },
+
+ {
+  id:"default-tutamutami",
+  title:"Tutamutami",
+  file:"Phillip-Lisomona-Tutamutami.mp3"
+ },
+
+ {
+  id:"default-tuyoomubona",
+  title:"Tuyoomubona",
+  file:"Phillip-Lisomona-Tuyoomubona.mp3"
+ }
+
+];
+
+/* =========================================
+   INDEXED DATABASE
+========================================= */
 
 function openDatabase(){
+
  return new Promise((resolve,reject)=>{
+
   const request=indexedDB.open(DB_NAME,DB_VERSION);
 
   request.onupgradeneeded=event=>{
+
    const database=event.target.result;
+
    if(!database.objectStoreNames.contains("music")){
     database.createObjectStore("music",{keyPath:"id"});
    }
+
   };
 
   request.onsuccess=event=>{
    db=event.target.result;
    resolve(db);
   };
+
   request.onerror=()=>reject(request.error);
+
  });
+
 }
 
 function saveItem(item){
+
  return new Promise((resolve,reject)=>{
+
   const tx=db.transaction("music","readwrite");
+
   tx.objectStore("music").put(item);
+
   tx.oncomplete=()=>resolve();
+
   tx.onerror=()=>reject(tx.error);
+
  });
+
 }
 
 function getAll(){
+
  return new Promise((resolve,reject)=>{
+
   const tx=db.transaction("music","readonly");
+
   const request=tx.objectStore("music").getAll();
+
   request.onsuccess=()=>resolve(request.result);
+
   request.onerror=()=>reject(request.error);
+
  });
+
 }
 
 function deleteItem(id){
+
  return new Promise((resolve,reject)=>{
+
   const tx=db.transaction("music","readwrite");
+
   tx.objectStore("music").delete(id);
+
   tx.oncomplete=()=>resolve();
+
   tx.onerror=()=>reject(tx.error);
+
  });
+
 }
 
 function makeId(){
- return crypto.randomUUID ?
-  crypto.randomUUID() :
-  Date.now()+"-"+Math.random().toString(16).slice(2);
+
+ return crypto.randomUUID
+  ? crypto.randomUUID()
+  : Date.now()+"-"+Math.random().toString(16).slice(2);
+
 }
 
-/* HELPERS */
+/* =========================================
+   LOAD NINE GITHUB SINGLES
+========================================= */
 
-function el(tag,cls,text){
- const node=document.createElement(tag);
- if(cls)node.className=cls;
- if(text!==undefined)node.textContent=text;
- return node;
-}
+async function loadDefaultSingles(){
 
-function addImage(container,blob,alt){
- const img=document.createElement("img");
- img.alt=alt;
- const url=URL.createObjectURL(blob);
- img.src=url;
- container.appendChild(img);
- img.addEventListener("load",()=>URL.revokeObjectURL(url),{once:true});
- img.addEventListener("error",()=>URL.revokeObjectURL(url),{once:true});
-}
+ const existing=await getAll();
 
-function makeButton(text,cls,action){
- const b=el("button",cls,text);
- b.type="button";
- b.addEventListener("click",action);
- return b;
-}
+ const existingIds=new Set(existing.map(item=>item.id));
 
-function addCard(container,item){
- const card=el("article","music-card");
- const cover=el("div","cover");
- if(item.cover)addImage(cover,item.cover,item.title);
- else cover.textContent="PHILLIP LISOMONA";
+ let deleted=[];
 
- const info=el("div","music-info");
- const title=el("h3","",item.title);
- const description=el("p","",
-  item.type==="album"
-   ? (item.year||"") + " • " + item.tracks.length+" Tracks"
-   : "Official Gospel Single"
- );
+ try{
+  deleted=JSON.parse(
+   localStorage.getItem("deletedDefaultSingles")||"[]"
+  );
+ }catch(e){}
 
- const buttons=el("div","card-buttons");
+ for(const song of defaultSingles){
 
- if(item.type==="album"){
-  buttons.appendChild(makeButton("▶ PLAY ALBUM","play",()=>{
-   playQueue(item.tracks.map(t=>({
-    id:t.id,title:t.title,blob:t.blob,group:item.title
-   })),0,false);
-  }));
- }else{
-  buttons.appendChild(makeButton("▶ LISTEN","play",()=>{
-   playQueue([{
-    id:item.id,title:item.title,blob:item.audio,group:"Single"
-   }],0,false);
-  }));
+  if(existingIds.has(song.id)||deleted.includes(song.id)){
+   continue;
+  }
+
+  try{
+
+   // MP3 files must be in the same directory as index.html
+
+   const response=await fetch(encodeURI("./"+song.file));
+
+   if(!response.ok){
+    console.warn("MP3 file not found:",song.file);
+    continue;
+   }
+
+   const audioBlob=await response.blob();
+
+   if(!audioBlob.size){
+    console.warn("Empty MP3 file:",song.file);
+    continue;
+   }
+
+   await saveItem({
+
+    id:song.id,
+    type:"single",
+    title:song.title,
+    cover:null,
+    audio:audioBlob,
+    description:"Gospel Single by Phillip Lisomona",
+    createdAt:Date.now()
+
+   });
+
+  }catch(error){
+
+   console.error("Unable to load:",song.title,error);
+
+  }
+
  }
 
- buttons.appendChild(makeButton("BUY / ENQUIRE","secondary",()=>{
-  const msg=encodeURIComponent("Hello, I would like to enquire about "+item.title);
-  window.open("https://wa.me/260971132818?text="+msg,"_blank");
- }));
+}
+
+/* =========================================
+   IMAGE DISPLAY
+========================================= */
+
+function addImage(container,blob,alt){
+
+ if(!blob){
+  container.textContent="PHILLIP LISOMONA";
+  return;
+ }
+
+ const img=document.createElement("img");
+
+ const url=URL.createObjectURL(blob);
+
+ img.src=url;
+ img.alt=alt;
+
+ img.onload=()=>URL.revokeObjectURL(url);
+
+ img.onerror=()=>{
+  URL.revokeObjectURL(url);
+  img.remove();
+  container.textContent="PHILLIP LISOMONA";
+ };
+
+ container.appendChild(img);
+
+}
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+function makeButton(text,cls,action){
+
+ const button=document.createElement("button");
+
+ button.type="button";
+ button.textContent=text;
+ button.className=cls;
+
+ button.addEventListener("click",action);
+
+ return button;
+
+}
+
+/* =========================================
+   DISPLAY ALBUMS AND SINGLES
+========================================= */
+
+function addCard(container,item){
+
+ const card=document.createElement("article");
+ card.className="music-card";
+
+ const cover=document.createElement("div");
+ cover.className="cover";
+
+ addImage(cover,item.cover,item.title);
+
+ const info=document.createElement("div");
+ info.className="music-info";
+
+ if(item.type==="single"){
+
+  const label=document.createElement("span");
+  label.className="single-label";
+  label.textContent="GOSPEL SINGLE";
+  info.appendChild(label);
+
+ }
+
+ const title=document.createElement("h3");
+ title.textContent=item.title;
+
+ const description=document.createElement("p");
+
+ if(item.type==="album"){
+
+  description.textContent=
+   (item.year||"")+
+   " • "+
+   item.tracks.length+
+   " Tracks";
+
+ }else{
+
+  description.textContent="Phillip Lisomona";
+
+ }
+
+ const buttons=document.createElement("div");
+ buttons.className="card-buttons";
+
+ if(item.type==="album"){
+
+  buttons.appendChild(
+   makeButton("▶ PLAY ALBUM","play",()=>{
+
+    const tracks=item.tracks.map(track=>({
+
+     id:track.id,
+     title:track.title,
+     blob:track.blob,
+     group:item.title
+
+    }));
+
+    playQueue(tracks,0,false);
+
+   })
+  );
+
+ }else{
+
+  buttons.appendChild(
+   makeButton("▶ LISTEN","play",()=>{
+
+    playQueue([{
+
+     id:item.id,
+     title:item.title,
+     blob:item.audio,
+     group:"Single"
+
+    }],0,false);
+
+   })
+  );
+
+ }
+
+ buttons.appendChild(
+  makeButton("BUY / ENQUIRE","secondary",()=>{
+
+   const message=encodeURIComponent(
+    "Hello, I would like to enquire about "+item.title
+   );
+
+   window.open(
+    "https://wa.me/260971132818?text="+message,
+    "_blank"
+   );
+
+  })
+ );
 
  info.append(title,description,buttons);
  card.append(cover,info);
  container.appendChild(card);
+
 }
 
-/* RENDER MUSIC */
+/* =========================================
+   RENDER ALL MUSIC
+========================================= */
 
 async function renderMusic(){
+
  const items=await getAll();
+
  const albumGrid=document.getElementById("albumGrid");
  const singleGrid=document.getElementById("singleGrid");
 
  albumGrid.replaceChildren();
  singleGrid.replaceChildren();
 
- const albums=items.filter(x=>x.type==="album");
- const singles=items.filter(x=>x.type==="single");
+ const albums=items.filter(item=>item.type==="album");
+
+ const singles=items.filter(item=>item.type==="single");
 
  if(!albums.length){
-  albumGrid.appendChild(el("div","empty","No albums uploaded yet. Visit the Admin Dashboard to add albums."));
- }
- if(!singles.length){
-  singleGrid.appendChild(el("div","empty","No singles uploaded yet. Visit the Admin Dashboard to add songs."));
+
+  const empty=document.createElement("div");
+  empty.className="empty";
+  empty.textContent="No albums uploaded yet.";
+  albumGrid.appendChild(empty);
+
  }
 
+ if(!singles.length){
+
+  const empty=document.createElement("div");
+  empty.className="empty";
+  empty.textContent="No singles available yet.";
+  singleGrid.appendChild(empty);
+
+ }
+
+ albums.sort((a,b)=>b.createdAt-a.createdAt);
+
+ singles.sort((a,b)=>{
+
+  const aDefault=a.id.startsWith("default-");
+  const bDefault=b.id.startsWith("default-");
+
+  if(aDefault!==bDefault)return aDefault?-1:1;
+
+  return b.createdAt-a.createdAt;
+
+ });
+
  albums.forEach(item=>addCard(albumGrid,item));
+
  singles.forEach(item=>addCard(singleGrid,item));
 
  renderTracks();
+
  renderAdminList(items);
+
 }
 
-/* SEARCH AND TRACK LIST */
+/* =========================================
+   SEARCH AND MUSIC LIBRARY
+========================================= */
 
 async function renderTracks(){
+
  const items=await getAll();
+
  const list=document.getElementById("trackList");
- const search=document.getElementById("search").value.toLowerCase().trim();
+
+ const search=document
+  .getElementById("search")
+  .value.toLowerCase().trim();
+
  list.replaceChildren();
 
  let tracks=[];
 
  items.forEach(item=>{
+
   if(item.type==="album"){
-   item.tracks.forEach(t=>tracks.push({
-    ...t,group:item.title
-   }));
-  }else{
-   tracks.push({
-    id:item.id,title:item.title,blob:item.audio,
-    group:"Single"
+
+   item.tracks.forEach(track=>{
+
+    tracks.push({
+
+     id:track.id,
+     title:track.title,
+     blob:track.blob,
+     group:item.title
+
+    });
+
    });
+
+  }else{
+
+   tracks.push({
+
+    id:item.id,
+    title:item.title,
+    blob:item.audio,
+    group:"Single"
+
+   });
+
   }
+
  });
 
- tracks=tracks.filter(t=>
-  t.title.toLowerCase().includes(search) ||
-  t.group.toLowerCase().includes(search)
+ tracks=tracks.filter(track=>
+
+  track.title.toLowerCase().includes(search)||
+  track.group.toLowerCase().includes(search)
+
  );
 
  if(!tracks.length){
-  list.appendChild(el("div","empty","No matching music found."));
+
+  const empty=document.createElement("div");
+  empty.className="empty";
+  empty.textContent="No matching music found.";
+
+  list.appendChild(empty);
+
   return;
+
  }
 
  tracks.forEach((track,index)=>{
-  const row=el("div","track");
-  const left=el("div","track-info");
-  left.append(
-   el("span","track-num",String(index+1).padStart(2,"0")),
-   (() => {
-    const wrap=el("div");
-    wrap.append(
-     el("div","track-name",track.title),
-     el("div","track-sub",track.group)
-    );
-    return wrap;
-   })()
+
+  const row=document.createElement("div");
+  row.className="track";
+
+  const left=document.createElement("div");
+  left.className="track-info";
+
+  const number=document.createElement("span");
+  number.className="track-num";
+  number.textContent=String(index+1).padStart(2,"0");
+
+  const details=document.createElement("div");
+
+  const name=document.createElement("div");
+  name.className="track-name";
+  name.textContent=track.title;
+
+  const subtitle=document.createElement("div");
+  subtitle.className="track-sub";
+  subtitle.textContent=track.group;
+
+  details.append(name,subtitle);
+  left.append(number,details);
+
+  const actions=document.createElement("div");
+  actions.className="track-actions";
+
+  actions.appendChild(
+   makeButton("▶ Play","",()=>{
+
+    playQueue(tracks,index,false);
+
+   })
   );
-  row.append(left,makeButton("▶ Play","",()=>{
-   playQueue(tracks,index,false);
-  }));
+
+  actions.appendChild(
+   makeButton("30s Preview","preview-btn",()=>{
+
+    playQueue(tracks,index,true);
+
+   })
+  );
+
+  row.append(left,actions);
+
   list.appendChild(row);
+
  });
+
 }
 
-/* MUSIC PLAYER */
+/* =========================================
+   MUSIC PLAYER
+========================================= */
 
 function playQueue(queue,index=0,preview=false){
+
  currentQueue=queue;
  currentIndex=index;
  previewMode=preview;
+
  playCurrent();
+
 }
 
 function playCurrent(){
+
  if(!currentQueue.length)return;
 
  const track=currentQueue[currentIndex];
- if(!track)return;
 
- if(currentUrl)URL.revokeObjectURL(currentUrl);
+ if(!track||!track.blob)return;
+
+ if(currentUrl){
+  URL.revokeObjectURL(currentUrl);
+  currentUrl=null;
+ }
+
  currentUrl=URL.createObjectURL(track.blob);
 
  audio.pause();
  audio.src=currentUrl;
  audio.currentTime=0;
 
- document.getElementById("nowPlaying").textContent=track.title;
+ document.getElementById("nowPlaying").textContent=
+  track.title;
+
  document.getElementById("player").style.display="flex";
+
  document.getElementById("playPause").textContent="Ⅱ";
 
- audio.play().catch(()=>{
-  alert("Unable to play this file. Please check the audio format.");
+ audio.play().catch(error=>{
+
+  console.error(error);
+
+  alert("Unable to play this music file.");
+
  });
+
 }
 
 function togglePlay(){
+
  if(audio.paused){
-  audio.play();
+
+  audio.play().catch(()=>{});
+
  }else{
+
   audio.pause();
+
  }
+
 }
 
-audio.addEventListener("play",()=>{
- document.getElementById("playPause").textContent="Ⅱ";
-});
-audio.addEventListener("pause",()=>{
- document.getElementById("playPause").textContent="▶";
-});
-
 function nextTrack(){
+
  if(currentIndex<currentQueue.length-1){
+
   currentIndex++;
   playCurrent();
+
  }else{
+
   audio.pause();
+
  }
+
 }
 
 function previousTrack(){
+
  if(audio.currentTime>3){
+
   audio.currentTime=0;
+
  }else if(currentIndex>0){
+
   currentIndex--;
   playCurrent();
+
  }
+
 }
 
-audio.addEventListener("ended",()=>{
- if(previewMode){
-  audio.pause();
-  return;
- }
- if(currentIndex<currentQueue.length-1){
-  currentIndex++;
-  playCurrent();
- }
+audio.addEventListener("play",()=>{
+
+ document.getElementById("playPause").textContent="Ⅱ";
+
 });
 
-/* PREVIEW: stop after 30 seconds */
+audio.addEventListener("pause",()=>{
+
+ document.getElementById("playPause").textContent="▶";
+
+});
+
+/* PREVIEW STOPS AFTER 30 SECONDS */
 
 audio.addEventListener("timeupdate",()=>{
- if(previewMode && audio.currentTime>=30){
+
+ if(previewMode&&audio.currentTime>=30){
+
   audio.pause();
   audio.currentTime=30;
+
  }
+
+});
+
+/* AUTOMATIC NEXT SONG */
+
+audio.addEventListener("ended",()=>{
+
+ if(previewMode){
+
+  return;
+
+ }
+
+ if(currentIndex<currentQueue.length-1){
+
+  currentIndex++;
+  playCurrent();
+
+ }
+
 });
 
 function closePlayer(){
+
  audio.pause();
  audio.removeAttribute("src");
  audio.load();
- if(currentUrl)URL.revokeObjectURL(currentUrl);
- currentUrl=null;
+
+ if(currentUrl){
+
+  URL.revokeObjectURL(currentUrl);
+  currentUrl=null;
+
+ }
+
  currentQueue=[];
+
  document.getElementById("player").style.display="none";
+
 }
 
-/* ADMIN NAVIGATION */
+/* =========================================
+   ADMIN DASHBOARD NAVIGATION
+========================================= */
 
 function showForm(type){
- const sections={
+
+ const forms={
+
   album:document.getElementById("albumForm"),
+
   single:document.getElementById("singleForm"),
+
   manage:document.getElementById("manageForm")
+
  };
- Object.keys(sections).forEach(key=>{
-  sections[key].classList.toggle("hidden",key!==type);
+
+ Object.keys(forms).forEach(key=>{
+
+  forms[key].classList.toggle("hidden",key!==type);
+
  });
- document.querySelectorAll(".tab").forEach(tab=>tab.classList.remove("active"));
+
+ document.querySelectorAll(".tab").forEach(tab=>{
+
+  tab.classList.remove("active");
+
+ });
+
  document.getElementById(
-  type==="album"?"albumTab":type==="single"?"singleTab":"manageTab"
+
+  type==="album"?"albumTab":
+  type==="single"?"singleTab":"manageTab"
+
  ).classList.add("active");
+
 }
 
-/* UPLOAD ALBUM */
+/* =========================================
+   UPLOAD ALBUM
+========================================= */
 
-document.getElementById("albumForm").addEventListener("submit",async e=>{
- e.preventDefault();
+document.getElementById("albumForm")
+.addEventListener("submit",async event=>{
+
+ event.preventDefault();
 
  const title=document.getElementById("albumTitle").value.trim();
+
  const year=document.getElementById("albumYear").value.trim();
- const description=document.getElementById("albumDescription").value.trim();
+
+ const description=document
+  .getElementById("albumDescription").value.trim();
+
  const cover=document.getElementById("albumCover").files[0];
- const files=Array.from(document.getElementById("albumTracks").files);
+
+ const files=Array.from(
+  document.getElementById("albumTracks").files
+ );
 
  if(!title||!cover||!files.length){
-  alert("Please provide an album title, cover and MP3 tracks.");
+
+  alert("Enter an album title, cover and MP3 tracks.");
+
   return;
+
  }
 
  if(!cover.type.startsWith("image/")||
-    files.some(f=>!f.type.startsWith("audio/"))){
-  alert("Please select a valid image and audio files.");
+    files.some(file=>!file.type.startsWith("audio/"))){
+
+  alert("Please select valid image and audio files.");
+
   return;
+
  }
 
  const tracks=files.map(file=>({
+
   id:makeId(),
-  title:file.name.replace(/\.[^.]+$/,"").replace(/[_-]/g," "),
+
+  title:file.name
+   .replace(/\.[^.]+$/,"")
+   .replace(/[_-]/g," "),
+
   blob:file
+
  }));
 
  const album={
-  id:makeId(),type:"album",title,year,description,
-  cover,tracks,createdAt:Date.now()
+
+  id:makeId(),
+  type:"album",
+  title,
+  year,
+  description,
+  cover,
+  tracks,
+  createdAt:Date.now()
+
  };
 
  try{
+
   await saveItem(album);
-  e.target.reset();
+
+  event.target.reset();
+
   await renderMusic();
+
   alert("Album and tracks uploaded successfully!");
- }catch(err){
-  console.error(err);
-  alert("Could not save the album. Check available browser storage.");
+
+ }catch(error){
+
+  console.error(error);
+
+  alert("Unable to save album. Check browser storage.");
+
  }
+
 });
 
-/* UPLOAD SINGLE */
+/* =========================================
+   UPLOAD SINGLE
+========================================= */
 
-document.getElementById("singleForm").addEventListener("submit",async e=>{
- e.preventDefault();
+document.getElementById("singleForm")
+.addEventListener("submit",async event=>{
+
+ event.preventDefault();
 
  const title=document.getElementById("singleTitle").value.trim();
- const cover=document.getElementById("singleCover").files[0];
- const audioFile=document.getElementById("singleAudio").files[0];
- const description=document.getElementById("singleDescription").value.trim();
 
- if(!title||!cover||!audioFile){
-  alert("Please fill in all required fields.");
+ const cover=document.getElementById("singleCover").files[0]||null;
+
+ const audioFile=document.getElementById("singleAudio").files[0];
+
+ const description=document
+  .getElementById("singleDescription").value.trim();
+
+ if(!title||!audioFile){
+
+  alert("Please enter the song title and select an audio file.");
+
   return;
+
  }
 
- if(!cover.type.startsWith("image/")||!audioFile.type.startsWith("audio/")){
-  alert("Select a valid image and audio file.");
+ if(!audioFile.type.startsWith("audio/")){
+
+  alert("Please select a valid audio file.");
+
   return;
+
+ }
+
+ if(cover&&!cover.type.startsWith("image/")){
+
+  alert("Please select a valid cover image.");
+
+  return;
+
  }
 
  const single={
-  id:makeId(),type:"single",title,cover,
-  audio:audioFile,description,createdAt:Date.now()
+
+  id:makeId(),
+  type:"single",
+  title,
+  cover,
+  audio:audioFile,
+  description,
+  createdAt:Date.now()
+
  };
 
  try{
+
   await saveItem(single);
-  e.target.reset();
+
+  event.target.reset();
+
   await renderMusic();
+
   alert("Single uploaded successfully!");
- }catch(err){
-  console.error(err);
-  alert("Could not save the single. Check available browser storage.");
+
+ }catch(error){
+
+  console.error(error);
+
+  alert("Unable to save single. Check browser storage.");
+
  }
+
 });
 
-/* ADMIN MUSIC MANAGEMENT */
+/* =========================================
+   ADMIN MUSIC MANAGEMENT
+========================================= */
 
 async function renderAdminList(items){
+
  const list=document.getElementById("adminList");
+
  list.replaceChildren();
 
  if(!items.length){
-  list.appendChild(el("p","empty","No music has been uploaded."));
+
+  const empty=document.createElement("p");
+  empty.className="empty";
+  empty.textContent="No music has been uploaded.";
+
+  list.appendChild(empty);
+
   return;
+
  }
 
  items.forEach(item=>{
-  const row=el("div","admin-item");
-  const name=el("div");
-  name.append(
-   el("strong","",item.title),
-   el("div","track-sub",item.type==="album"?"Album":"Single")
-  );
+
+  const row=document.createElement("div");
+  row.className="admin-item";
+
+  const name=document.createElement("div");
+
+  const title=document.createElement("strong");
+  title.textContent=item.title;
+
+  const type=document.createElement("div");
+  type.className="track-sub";
+  type.textContent=item.type==="album"?"Album":"Single";
+
+  name.append(title,type);
+
   const del=makeButton("Delete","",async()=>{
-   if(!confirm("Permanently delete "+item.title+"?"))return;
+
+   if(!confirm("Delete "+item.title+"?"))return;
+
    await deleteItem(item.id);
+
+   // Prevent built-in tracks from reloading after deletion
+
+   if(item.id.startsWith("default-")){
+
+    let deleted=[];
+
+    try{
+
+     deleted=JSON.parse(
+      localStorage.getItem("deletedDefaultSingles")||"[]"
+     );
+
+    }catch(error){}
+
+    if(!deleted.includes(item.id)){
+
+     deleted.push(item.id);
+
+    }
+
+    localStorage.setItem(
+     "deletedDefaultSingles",
+     JSON.stringify(deleted)
+    );
+
+   }
+
    await renderMusic();
+
   });
+
   row.append(name,del);
+
   list.appendChild(row);
+
  });
+
 }
 
-/* ARTIST PHOTO
-   Optional: upload artist photo from admin
-   in a future cloud-enabled version.
-*/
-
-/* NAVIGATION */
+/* =========================================
+   NAVIGATION
+========================================= */
 
 function toggleMenu(){
- document.getElementById("navlinks").classList.toggle("show");
+
+ document.getElementById("navlinks")
+ .classList.toggle("show");
+
 }
+
 function closeMenu(){
- document.getElementById("navlinks").classList.remove("show");
+
+ document.getElementById("navlinks")
+ .classList.remove("show");
+
 }
 
-document.getElementById("year").textContent=new Date().getFullYear();
+/* =========================================
+   WEBSITE INITIALIZATION
+========================================= */
 
-/* START WEBSITE */
+document.getElementById("year").textContent=
+ new Date().getFullYear();
 
 (async()=>{
+
  try{
+
   await openDatabase();
+
+  // Import the nine GitHub songs
+
+  await loadDefaultSingles();
+
+  // Display all music
+
   await renderMusic();
+
  }catch(error){
+
   console.error(error);
-  alert("Your browser could not open the music database. Please use an updated browser.");
+
+  alert(
+   "Unable to initialize the music database. "+
+   "Please use an updated browser."
+  );
+
  }
+
 })();
+
 </script>
+
 </body>
 </html>
