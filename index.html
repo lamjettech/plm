@@ -1,471 +1,491 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHILLIP LISOMONA MUSIC</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            black: '#0D0D0E',
-                            dark: '#141416',
-                            cardBg: '#1C1C1F',
-                            cardBorder: '#2A2A2E',
-                            orange: '#FF6B00',
-                            orangeHover: '#E05E00',
-                            orangeLight: '#FF8800'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif']
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phillip Lisomona Music</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandOrange: '#FF6B00',
+            brandBlack: '#0D0D0E',
+            brandDark: '#161618',
+            brandGray: '#242427'
+          }
         }
-    </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body {
-            background-color: #0D0D0E;
-            color: #F3F4F6;
-            font-family: 'Inter', sans-serif;
-        }
-        /* Custom Accent Glows */
-        .orange-glow {
-            box-shadow: 0 0 25px rgba(255, 107, 0, 0.25);
-        }
-    </style>
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0D0D0E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FF6B00;
+      border-radius: 4px;
+    }
+  </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-brand-orange selection:text-black">
+<body class="bg-brandBlack text-white min-h-screen flex flex-col font-sans antialiased">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-cardBorder">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <!-- Brand Title -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-brand-orange text-black flex items-center justify-center font-black text-xl shadow-lg shadow-brand-orange/30 group-hover:scale-105 transition-transform">
-                    PL
-                </div>
-                <span class="text-xl md:text-2xl font-extrabold tracking-tight text-white group-hover:text-brand-orange transition-colors">
-                    PHILLIP LISOMONA MUSIC
-                </span>
+  <!-- ================= HEADER SECTION ================= -->
+  <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-brandOrange/20 shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Title / Logo Header Sketch Element -->
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-full bg-brandOrange flex items-center justify-center font-bold text-xl text-black shadow-md shadow-brandOrange/30">
+          PL
+        </div>
+        <h1 class="text-xl md:text-2xl font-black tracking-wider text-white">
+          PHILLIP LISOMONA <span class="text-brandOrange">MUSIC</span>
+        </h1>
+      </div>
+
+      <!-- Navigation & Actions -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold uppercase tracking-wider">
+        <a href="#about" class="hover:text-brandOrange transition">About</a>
+        <a href="#discography" class="hover:text-brandOrange transition">Discography</a>
+        <a href="#services" class="hover:text-brandOrange transition">Services</a>
+        <a href="#lessons" class="hover:text-brandOrange transition">Lessons</a>
+        <a href="#contact" class="hover:text-brandOrange transition">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menu-btn" class="md:hidden text-2xl text-brandOrange focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brandGray border-b border-brandOrange/20 px-4 py-4 space-y-3 font-semibold uppercase text-sm">
+      <a href="#about" class="block hover:text-brandOrange">About</a>
+      <a href="#discography" class="block hover:text-brandOrange">Discography</a>
+      <a href="#services" class="block hover:text-brandOrange">Services</a>
+      <a href="#lessons" class="block hover:text-brandOrange">Lessons</a>
+      <a href="#contact" class="block hover:text-brandOrange">Contact</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO & BIO SECTION ================= -->
+  <section id="about" class="py-12 md:py-16 px-4 bg-gradient-to-b from-brandDark to-brandBlack border-b border-brandGray">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <div class="inline-block px-3 py-1 bg-brandOrange/10 border border-brandOrange/30 text-brandOrange text-xs font-semibold rounded-full uppercase tracking-wider">
+        Gospel Musician & Entrepreneur
+      </div>
+      
+      <!-- Bio Statement from Prompt -->
+      <h2 class="text-2xl md:text-4xl font-extrabold leading-relaxed md:leading-snug text-gray-100">
+        Phillip Lisomona is a renowned gospel musician of the Seventh Day Adventist Church based in Lusaka, Zambia | a music producer and an Entrepreneur
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20would%20like%20to%20inquire%20about%20your%20music%20and%20services." 
+           target="_blank"
+           class="px-6 py-3 bg-brandOrange text-black font-bold rounded-lg hover:bg-orange-600 transition duration-200 shadow-lg shadow-brandOrange/20 flex items-center gap-2">
+          <i class="fab font-bold fa-whatsapp text-lg"></i> Direct Booking
+        </a>
+        <a href="https://www.facebook.com/Philliplisomona" 
+           target="_blank"
+           class="px-6 py-3 bg-brandGray border border-brandOrange/40 text-white font-semibold rounded-lg hover:bg-brandOrange hover:text-black transition duration-200 flex items-center gap-2">
+          <i class="fab fa-facebook-f text-brandOrange hover:text-black"></i> Follow on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MUSIC SHOWCASE SECTION ================= -->
+  <section id="discography" class="py-14 px-4 max-w-6xl mx-auto w-full">
+    <div class="text-center mb-10">
+      <h3 class="text-3xl font-extrabold uppercase tracking-wide">
+        Music & <span class="text-brandOrange">Releases</span>
+      </h3>
+      <p class="text-gray-400 text-sm mt-1">Listen, Stream, or Purchase Official Tracks</p>
+    </div>
+
+    <!-- 1. SINGLE ALBUM ACCORDION SECTION -->
+    <div class="mb-12">
+      <div class="bg-brandDark border-2 border-brandOrange/50 rounded-2xl overflow-hidden shadow-2xl">
+        
+        <!-- Album Header Card (Clickable to Toggle Tracks) -->
+        <div onclick="toggleAlbum()" class="cursor-pointer p-6 bg-gradient-to-r from-brandDark via-brandGray to-brandDark flex flex-col md:flex-row items-center justify-between gap-6 hover:bg-brandGray/80 transition duration-300">
+          <div class="flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
+            <!-- Album Artwork -->
+            <div class="relative w-28 h-28 md:w-32 md:h-32 rounded-xl bg-brandBlack border-2 border-brandOrange overflow-hidden flex-shrink-0 flex items-center justify-center shadow-lg">
+              <!-- png artwork tag -->
+              <img src="https://picsum.photos/300/300?random=1" alt="Album Artwork" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Album Title & Metadata -->
+            <div>
+              <span class="inline-block px-2.5 py-0.5 bg-brandOrange/20 text-brandOrange text-xs font-bold rounded uppercase mb-1">Official Album</span>
+              <!-- Album title -->
+              <h4 class="text-2xl md:text-3xl font-black text-white">Ifisabo "The Fruit" Volume 5</h4>
+              <!-- Artist name -->
+              <p class="text-gray-400 font-medium">Phillip Lisomona</p>
+              <p class="text-xs text-brandOrange font-semibold mt-2 flex items-center gap-1 justify-center md:justify-start">
+                <i class="fas fa-layer-group"></i> 3 Included Tracks • Tap to view tracklist
+              </p>
+            </div>
+          </div>
+
+          <!-- Toggle / Action Button -->
+          <div class="flex items-center gap-3">
+            <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20full%20album%20Ifisabo%20The%20Fruit%20Volume%205." 
+               target="_blank" 
+               onclick="event.stopPropagation();"
+               class="px-5 py-2.5 bg-brandOrange text-black font-bold text-sm rounded-lg hover:bg-orange-500 transition shadow-md flex items-center gap-2">
+              <i class="fas fa-shopping-cart"></i> Buy Album
             </a>
-
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-6 font-semibold text-sm">
-                <a href="#about" class="hover:text-brand-orange transition-colors">About</a>
-                <a href="#music" class="hover:text-brand-orange transition-colors">Music & Albums</a>
-                <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
-                <a href="#lessons" class="hover:text-brand-orange transition-colors">Lessons</a>
-                <a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a>
-            </nav>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button id="menu-btn" aria-label="Toggle navigation menu" class="md:hidden text-white p-2 text-2xl hover:text-brand-orange focus:outline-none">
-                <i class="fa-solid fa-bars-staggered"></i>
+            <button class="w-10 h-10 rounded-full bg-brandBlack border border-brandOrange/40 text-brandOrange flex items-center justify-center text-lg">
+              <i id="album-chevron" class="fas fa-chevron-down transition-transform duration-300"></i>
             </button>
+          </div>
         </div>
 
-        <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-brand-cardBorder px-4 py-4 space-y-3 font-semibold text-center">
-            <a href="#about" class="block py-2 hover:text-brand-orange">About</a>
-            <a href="#music" class="block py-2 hover:text-brand-orange">Music & Albums</a>
-            <a href="#services" class="block py-2 hover:text-brand-orange">Services</a>
-            <a href="#lessons" class="block py-2 hover:text-brand-orange">Lessons</a>
-            <a href="#contact" class="block py-2 hover:text-brand-orange">Contact</a>
+        <!-- Hidden Tracklist (Revealed when Album is Tapped) -->
+        <div id="album-tracklist" class="hidden border-t border-brandGray bg-brandBlack/60 divide-y divide-brandGray/40">
+          
+          <!-- Album Track 1 -->
+          <div class="p-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 hover:bg-brandDark/50 transition">
+            <div class="flex items-center gap-4 w-full sm:w-auto">
+              <div class="w-12 h-12 rounded bg-brandDark border border-brandOrange/30 overflow-hidden flex-shrink-0">
+                <!-- png artwork tag -->
+                <img src="https://picsum.photos/100/100?random=11" alt="Track Cover" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <!-- Track title -->
+                <h5 class="font-bold text-white text-base">Track 1: Abafyefyemu</h5>
+                <p class="text-xs text-gray-400">Phillip Lisomona • Ifisabo "The Fruit" Vol. 5</p>
+              </div>
+            </div>
+
+            <!-- Audio Player & Controls -->
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+              <!-- mp3 tag -->
+              <audio id="audio-alb-1" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+              <!-- Play button -->
+              <button onclick="togglePlay('audio-alb-1', 'play-alb-1')" class="w-10 h-10 rounded-full bg-brandOrange text-black font-bold flex items-center justify-center hover:bg-orange-500 transition">
+                <i id="play-alb-1" class="fas fa-play text-xs"></i>
+              </button>
+
+              <!-- Buy button -->
+              <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20track%20Abafyefyemu%20from%20Ifisabo%20Vol%205." 
+                 target="_blank"
+                 class="px-4 py-2 border border-brandOrange text-brandOrange font-bold text-xs rounded-md hover:bg-brandOrange hover:text-black transition">
+                Buy Track
+              </a>
+            </div>
+          </div>
+
+          <!-- Album Track 2 -->
+          <div class="p-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 hover:bg-brandDark/50 transition">
+            <div class="flex items-center gap-4 w-full sm:w-auto">
+              <div class="w-12 h-12 rounded bg-brandDark border border-brandOrange/30 overflow-hidden flex-shrink-0">
+                <!-- png artwork tag -->
+                <img src="https://picsum.photos/100/100?random=12" alt="Track Cover" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <!-- Track title -->
+                <h5 class="font-bold text-white text-base">Track 2: Abalunya Muke Twende</h5>
+                <p class="text-xs text-gray-400">Phillip Lisomona • Ifisabo "The Fruit" Vol. 5</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+              <!-- mp3 tag -->
+              <audio id="audio-alb-2" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+
+              <!-- Play button -->
+              <button onclick="togglePlay('audio-alb-2', 'play-alb-2')" class="w-10 h-10 rounded-full bg-brandOrange text-black font-bold flex items-center justify-center hover:bg-orange-500 transition">
+                <i id="play-alb-2" class="fas fa-play text-xs"></i>
+              </button>
+
+              <!-- Buy button -->
+              <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20track%20Abalunya%20Muke%20Twende%20from%20Ifisabo%20Vol%205." 
+                 target="_blank"
+                 class="px-4 py-2 border border-brandOrange text-brandOrange font-bold text-xs rounded-md hover:bg-brandOrange hover:text-black transition">
+                Buy Track
+              </a>
+            </div>
+          </div>
+
+          <!-- Album Track 3 -->
+          <div class="p-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 hover:bg-brandDark/50 transition">
+            <div class="flex items-center gap-4 w-full sm:w-auto">
+              <div class="w-12 h-12 rounded bg-brandDark border border-brandOrange/30 overflow-hidden flex-shrink-0">
+                <!-- png artwork tag -->
+                <img src="https://picsum.photos/100/100?random=13" alt="Track Cover" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <!-- Track title -->
+                <h5 class="font-bold text-white text-base">Track 3: Muleisa Fumuyandi</h5>
+                <p class="text-xs text-gray-400">Phillip Lisomona • Ifisabo "The Fruit" Vol. 5</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+              <!-- mp3 tag -->
+              <audio id="audio-alb-3" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+
+              <!-- Play button -->
+              <button onclick="togglePlay('audio-alb-3', 'play-alb-3')" class="w-10 h-10 rounded-full bg-brandOrange text-black font-bold flex items-center justify-center hover:bg-orange-500 transition">
+                <i id="play-alb-3" class="fas fa-play text-xs"></i>
+              </button>
+
+              <!-- Buy button -->
+              <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20track%20Muleisa%20Fumuyandi%20from%20Ifisabo%20Vol%205." 
+                 target="_blank"
+                 class="px-4 py-2 border border-brandOrange text-brandOrange font-bold text-xs rounded-md hover:bg-brandOrange hover:text-black transition">
+                Buy Track
+              </a>
+            </div>
+          </div>
+
         </div>
-    </header>
+      </div>
+    </div>
 
-    <!-- MAIN CONTENT WRAPPER -->
-    <main class="max-w-6xl mx-auto px-4 py-8 space-y-12 flex-grow">
+    <!-- 2. THREE SINGLE TRACKS SECTION -->
+    <div class="space-y-4">
+      <h4 class="text-xl font-bold uppercase text-white tracking-wide border-l-4 border-brandOrange pl-3 mb-6">
+        Single Releases
+      </h4>
 
-        <!-- BIO / ABOUT SECTION -->
-        <section id="about" class="bg-gradient-to-br from-brand-cardBg to-brand-dark p-6 md:p-10 rounded-3xl border border-brand-cardBorder shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-brand-orange/10 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div class="relative z-10 space-y-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold uppercase tracking-widest">
-                    <i class="fa-solid fa-cross"></i> Gospel Artist & Producer
-                </div>
-                
-                <h1 class="text-2xl md:text-4xl font-extrabold leading-tight text-white">
-                    Official Ministry & Studio Platform
-                </h1>
-
-                <!-- Statement from prompt -->
-                <p class="text-lg md:text-xl text-gray-300 font-medium leading-relaxed border-l-4 border-brand-orange pl-4 py-1">
-                    Phillip Lisomona is a renowned gospel musician of the Seventh Day Adventist Church based in Lusaka, Zambia | a music producer and an Entrepreneur
-                </p>
-
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#music" class="px-6 py-3 bg-brand-orange text-black font-bold rounded-xl hover:bg-brand-orangeHover transition-all shadow-lg shadow-brand-orange/20 flex items-center gap-2">
-                        <i class="fa-solid fa-music"></i> Listen to Songs
-                    </a>
-                    <a href="#contact" class="px-6 py-3 bg-zinc-800 text-white font-semibold rounded-xl hover:bg-zinc-700 border border-zinc-700 transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-envelope"></i> Get In Touch
-                    </a>
-                </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Single Track 1 -->
+        <div class="bg-brandDark border border-brandGray rounded-xl p-5 hover:border-brandOrange/50 transition flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="relative w-full h-44 rounded-lg bg-brandBlack overflow-hidden mb-4 border border-brandGray">
+              <!-- png artwork tag -->
+              <img src="https://picsum.photos/400/400?random=2" alt="Artwork" class="w-full h-full object-cover">
             </div>
-        </section>
+            <!-- Track title -->
+            <h5 class="text-lg font-bold text-white">Echonyimbila</h5>
+            <!-- Album title -->
+            <p class="text-xs text-brandOrange font-medium">Single Release</p>
+            <!-- Artist name -->
+            <p class="text-xs text-gray-400 mt-1">Artist: Phillip Lisomona</p>
+          </div>
 
-        <!-- MUSIC / TRACKS & ALBUMS SECTION -->
-        <section id="music" class="space-y-6">
-            <div class="flex items-center justify-between">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-white flex items-center gap-3">
-                    <span class="w-2 h-8 bg-brand-orange rounded-full"></span>
-                    Featured Songs & Albums
-                </h2>
+          <div class="mt-5 space-y-3">
+            <!-- mp3 tag -->
+            <audio id="audio-s1" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+
+            <div class="flex items-center gap-3">
+              <!-- Play button -->
+              <button onclick="togglePlay('audio-s1', 'play-s1')" class="flex-1 py-2.5 bg-brandOrange text-black font-bold text-xs rounded-lg hover:bg-orange-500 transition flex items-center justify-center gap-2">
+                <i id="play-s1" class="fas fa-play"></i> Play Preview
+              </button>
+              <!-- Buy button -->
+              <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20single%20Echonyimbila." 
+                 target="_blank"
+                 class="flex-1 py-2.5 border border-brandOrange text-brandOrange font-bold text-xs rounded-lg hover:bg-brandOrange hover:text-black transition flex items-center justify-center gap-1">
+                <i class="fas fa-shopping-cart"></i> Buy
+              </a>
             </div>
-
-            <!-- MUSIC GRID -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                <!-- TRACK / ALBUM CARD 1 -->
-                <div class="bg-brand-cardBg rounded-2xl p-5 border border-brand-cardBorder hover:border-brand-orange/50 transition-all shadow-lg flex flex-col justify-between">
-                    <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start">
-                        <!-- png artwork tag -->
-                        <div class="relative w-36 h-36 flex-shrink-0 rounded-xl overflow-hidden bg-zinc-800 border border-zinc-700 shadow-md group">
-                            <!-- png artwork tag image -->
-                            <img src="https://placehold.co/400x400/18181b/ff6b00?text=PNG+Artwork" alt="Album Artwork" class="w-full h-full object-cover">
-                            <!-- Play button overlay on artwork -->
-                            <button onclick="togglePlay('track1-audio', 'track1-btn')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Play Track Overlay">
-                                <i id="track1-btn-overlay" class="fa-solid fa-play text-3xl text-brand-orange"></i>
-                            </button>
-                        </div>
-
-                        <!-- TRACK METADATA -->
-                        <div class="space-y-2 text-center sm:text-left flex-grow">
-                            <!-- Album title -->
-                            <span class="text-xs uppercase font-bold tracking-wider text-brand-orange bg-brand-orange/10 px-2.5 py-0.5 rounded-md inline-block">
-                                Album Title: Grace & Truth
-                            </span>
-                            
-                            <!-- Track title -->
-                            <h3 class="text-xl font-bold text-white leading-snug">
-                                Track Title: Nalilumbanya
-                            </h3>
-
-                            <!-- Artist name -->
-                            <p class="text-sm text-gray-400 font-medium">
-                                Artist Name: Phillip Lisomona
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- mp3 tag & PLAYER CONTROLS -->
-                    <div class="mt-5 pt-4 border-t border-zinc-800 space-y-3">
-                        <!-- mp3 tag -->
-                        <audio id="track1-audio" preload="metadata">
-                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-                            Your browser does not support the audio tag.
-                        </audio>
-
-                        <!-- AUDIO PROGRESS BAR -->
-                        <div class="flex items-center gap-3">
-                            <span id="track1-time" class="text-xs text-gray-400 font-mono">0:00</span>
-                            <input id="track1-progress" type="range" value="0" min="0" max="100" aria-label="Track 1 Seek Bar" class="w-full h-1.5 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-brand-orange" onchange="seekAudio('track1-audio', this.value)">
-                        </div>
-
-                        <!-- ACTION BUTTONS: PLAY & BUY -->
-                        <div class="flex items-center gap-3 pt-1">
-                            <!-- Play button -->
-                            <button id="track1-btn" onclick="togglePlay('track1-audio', 'track1-btn')" class="flex-1 py-2.5 bg-brand-orange text-black font-extrabold rounded-xl hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-md shadow-brand-orange/20">
-                                <i class="fa-solid fa-play"></i>
-                                <span>Play Track</span>
-                            </button>
-
-                            <!-- Buy button -->
-                            <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20would%20like%20to%20buy%20the%20track:%20Nalilumbanya" target="_blank" class="flex-1 py-2.5 bg-zinc-800 text-white font-bold rounded-xl hover:bg-zinc-700 border border-zinc-700 transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-cart-shopping text-brand-orange"></i>
-                                <span>Buy Track</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TRACK / ALBUM CARD 2 -->
-                <div class="bg-brand-cardBg rounded-2xl p-5 border border-brand-cardBorder hover:border-brand-orange/50 transition-all shadow-lg flex flex-col justify-between">
-                    <div class="flex flex-col sm:flex-row gap-5 items-center sm:items-start">
-                        <!-- png artwork tag -->
-                        <div class="relative w-36 h-36 flex-shrink-0 rounded-xl overflow-hidden bg-zinc-800 border border-zinc-700 shadow-md group">
-                            <!-- png artwork tag image -->
-                            <img src="https://placehold.co/400x400/18181b/ff6b00?text=PNG+Artwork" alt="Album Artwork" class="w-full h-full object-cover">
-                            <!-- Play button overlay on artwork -->
-                            <button onclick="togglePlay('track2-audio', 'track2-btn')" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" aria-label="Play Track Overlay">
-                                <i id="track2-btn-overlay" class="fa-solid fa-play text-3xl text-brand-orange"></i>
-                            </button>
-                        </div>
-
-                        <!-- TRACK METADATA -->
-                        <div class="space-y-2 text-center sm:text-left flex-grow">
-                            <!-- Album title -->
-                            <span class="text-xs uppercase font-bold tracking-wider text-brand-orange bg-brand-orange/10 px-2.5 py-0.5 rounded-md inline-block">
-                                Album Title: Divine Mercy
-                            </span>
-                            
-                            <!-- Track title -->
-                            <h3 class="text-xl font-bold text-white leading-snug">
-                                Track Title: Mwe Lesa Wandi
-                            </h3>
-
-                            <!-- Artist name -->
-                            <p class="text-sm text-gray-400 font-medium">
-                                Artist Name: Phillip Lisomona
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- mp3 tag & PLAYER CONTROLS -->
-                    <div class="mt-5 pt-4 border-t border-zinc-800 space-y-3">
-                        <!-- mp3 tag -->
-                        <audio id="track2-audio" preload="metadata">
-                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
-                            Your browser does not support the audio tag.
-                        </audio>
-
-                        <!-- AUDIO PROGRESS BAR -->
-                        <div class="flex items-center gap-3">
-                            <span id="track2-time" class="text-xs text-gray-400 font-mono">0:00</span>
-                            <input id="track2-progress" type="range" value="0" min="0" max="100" aria-label="Track 2 Seek Bar" class="w-full h-1.5 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-brand-orange" onchange="seekAudio('track2-audio', this.value)">
-                        </div>
-
-                        <!-- ACTION BUTTONS: PLAY & BUY -->
-                        <div class="flex items-center gap-3 pt-1">
-                            <!-- Play button -->
-                            <button id="track2-btn" onclick="togglePlay('track2-audio', 'track2-btn')" class="flex-1 py-2.5 bg-brand-orange text-black font-extrabold rounded-xl hover:bg-brand-orangeHover transition-all flex items-center justify-center gap-2 shadow-md shadow-brand-orange/20">
-                                <i class="fa-solid fa-play"></i>
-                                <span>Play Track</span>
-                            </button>
-
-                            <!-- Buy button -->
-                            <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20would%20like%20to%20buy%20the%20track:%20Mwe%20Lesa%20Wandi" target="_blank" class="flex-1 py-2.5 bg-zinc-800 text-white font-bold rounded-xl hover:bg-zinc-700 border border-zinc-700 transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-cart-shopping text-brand-orange"></i>
-                                <span>Buy Track</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SERVICES SECTION -->
-        <section id="services" class="bg-brand-cardBg rounded-3xl p-6 md:p-8 border border-brand-cardBorder space-y-6">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-white flex items-center gap-3">
-                <span class="w-2 h-8 bg-brand-orange rounded-full"></span>
-                Music Production Booking
-            </h2>
-            <p class="text-gray-400 text-sm md:text-base">
-                Professional studio services tailored for solo gospel artists, choirs, and bands based in Lusaka & beyond.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-brand-dark p-6 rounded-2xl border border-zinc-800 space-y-3 hover:border-brand-orange/40 transition-all">
-                    <div class="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange text-2xl">
-                        <i class="fa-solid fa-sliders"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Instrumentals</h3>
-                    <p class="text-gray-400 text-sm">Custom gospel beats, keyboard arrangements, and full backing tracks.</p>
-                </div>
-
-                <div class="bg-brand-dark p-6 rounded-2xl border border-zinc-800 space-y-3 hover:border-brand-orange/40 transition-all">
-                    <div class="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange text-2xl">
-                        <i class="fa-solid fa-microphone-lines"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Recording</h3>
-                    <p class="text-gray-400 text-sm">High-definition vocal and acoustic instrument recording sessions.</p>
-                </div>
-
-                <div class="bg-brand-dark p-6 rounded-2xl border border-zinc-800 space-y-3 hover:border-brand-orange/40 transition-all">
-                    <div class="w-12 h-12 bg-brand-orange/10 rounded-xl flex items-center justify-center text-brand-orange text-2xl">
-                        <i class="fa-solid fa-compact-disc"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Mixing & Mastering</h3>
-                    <p class="text-gray-400 text-sm">Industry-standard audio balancing, clarity processing, and mastering.</p>
-                </div>
-            </div>
-
-            <div class="text-center pt-2">
-                <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20book%20a%20Music%20Production%20Session" target="_blank" class="inline-flex items-center gap-2 px-8 py-3.5 bg-brand-orange text-black font-extrabold rounded-xl hover:bg-brand-orangeHover transition-all shadow-lg shadow-brand-orange/20">
-                    <i class="fa-solid fa-calendar-check"></i> Book Studio Session
-                </a>
-            </div>
-        </section>
-
-        <!-- LESSONS SECTION -->
-        <section id="lessons" class="bg-gradient-to-r from-brand-dark via-brand-cardBg to-brand-dark rounded-3xl p-6 md:p-8 border border-brand-cardBorder space-y-6">
-            <div class="max-w-3xl space-y-4">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-white flex items-center gap-3">
-                    <span class="w-2 h-8 bg-brand-orange rounded-full"></span>
-                    Keyboard & Music Production Lessons
-                </h2>
-                <p class="text-gray-300 text-base md:text-lg leading-relaxed">
-                    Learn to play gospel keyboard with spirit and skill, or master digital music production with one-on-one training from Phillip Lisomona.
-                </p>
-
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-300 pt-2 font-medium">
-                    <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-brand-orange"></i> Gospel Chords & Scales
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-brand-orange"></i> Live Worship Accompaniment
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-brand-orange"></i> DAW Studio Workflows
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-brand-orange"></i> Sound Design & Arrangement
-                    </li>
-                </ul>
-
-                <div class="pt-4">
-                    <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20am%20interested%20in%20Keyboard%20and%20Music%20Production%20Lessons" target="_blank" class="inline-flex items-center gap-2 px-7 py-3 bg-zinc-800 text-brand-orange border border-brand-orange/40 font-bold rounded-xl hover:bg-brand-orange hover:text-black transition-all">
-                        <i class="fa-solid fa-graduation-cap"></i> Enroll For Lessons
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION BUTTONS -->
-        <section id="contact" class="space-y-4">
-            <h2 class="text-center text-xl md:text-2xl font-bold text-white">
-                Connect Directly With Phillip Lisomona
-            </h2>
-
-            <!-- QUICK CONTACT BUTTONS (WhatsApp | Phone | FB | Email) -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <!-- WhatsApp -->
-                <a href="https://wa.me/260971132818" target="_blank" class="py-3 px-4 bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 font-bold rounded-xl hover:bg-emerald-600 hover:text-white transition-all flex items-center justify-center gap-2 text-sm">
-                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                    <span>WhatsApp</span>
-                </a>
-
-                <!-- Phone -->
-                <a href="tel:+260971132818" class="py-3 px-4 bg-brand-orange/20 border border-brand-orange/40 text-brand-orange font-bold rounded-xl hover:bg-brand-orange hover:text-black transition-all flex items-center justify-center gap-2 text-sm">
-                    <i class="fa-solid fa-phone text-lg"></i>
-                    <span>Phone</span>
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/Philliplisomona" target="_blank" class="py-3 px-4 bg-blue-600/20 border border-blue-500/40 text-blue-400 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-2 text-sm">
-                    <i class="fa-brands fa-facebook-f text-lg"></i>
-                    <span>Facebook</span>
-                </a>
-
-                <!-- Email -->
-                <a href="mailto:philliplisomonamusic@gmail.com" class="py-3 px-4 bg-zinc-800 border border-zinc-700 text-gray-200 font-bold rounded-xl hover:bg-zinc-700 transition-all flex items-center justify-center gap-2 text-sm">
-                    <i class="fa-solid fa-envelope text-lg"></i>
-                    <span>Email</span>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-brand-cardBorder bg-brand-black py-6 text-center text-xs md:text-sm text-gray-400 font-medium">
-        <div class="max-w-6xl mx-auto px-4 space-y-2">
-            <p class="text-white font-bold tracking-wide">
-                PHILLIP LISOMONA MUSIC || All Rights Reserved
-            </p>
-            <p class="text-gray-400 text-xs">
-                Seventh Day Adventist Gospel Ministry & Studio Production | Lusaka, Zambia
-            </p>
+          </div>
         </div>
-    </footer>
 
-    <!-- JS FOR MOBILE MENU & AUDIO CONTROLS -->
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        <!-- Single Track 2 -->
+        <div class="bg-brandDark border border-brandGray rounded-xl p-5 hover:border-brandOrange/50 transition flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="relative w-full h-44 rounded-lg bg-brandBlack overflow-hidden mb-4 border border-brandGray">
+              <!-- png artwork tag -->
+              <img src="https://picsum.photos/400/400?random=3" alt="Artwork" class="w-full h-full object-cover">
+            </div>
+            <!-- Track title -->
+            <h5 class="text-lg font-bold text-white">Ali Lumba Kweli</h5>
+            <!-- Album title -->
+            <p class="text-xs text-brandOrange font-medium">Single Release</p>
+            <!-- Artist name -->
+            <p class="text-xs text-gray-400 mt-1">Artist: Phillip Lisomona</p>
+          </div>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+          <div class="mt-5 space-y-3">
+            <!-- mp3 tag -->
+            <audio id="audio-s2" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
 
-        // Close menu when clicking links
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+            <div class="flex items-center gap-3">
+              <!-- Play button -->
+              <button onclick="togglePlay('audio-s2', 'play-s2')" class="flex-1 py-2.5 bg-brandOrange text-black font-bold text-xs rounded-lg hover:bg-orange-500 transition flex items-center justify-center gap-2">
+                <i id="play-s2" class="fas fa-play"></i> Play Preview
+              </button>
+              <!-- Buy button -->
+              <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20single%20Ali%20Lumba%20Kweli." 
+                 target="_blank"
+                 class="flex-1 py-2.5 border border-brandOrange text-brandOrange font-bold text-xs rounded-lg hover:bg-brandOrange hover:text-black transition flex items-center justify-center gap-1">
+                <i class="fas fa-shopping-cart"></i> Buy
+              </a>
+            </div>
+          </div>
+        </div>
 
-        // AUDIO PLAY / PAUSE FUNCTIONALITY
-        function togglePlay(audioId, buttonId) {
-            const audio = document.getElementById(audioId);
-            const button = document.getElementById(buttonId);
-            const overlayIcon = document.getElementById(buttonId + '-overlay');
+        <!-- Single Track 3 -->
+        <div class="bg-brandDark border border-brandGray rounded-xl p-5 hover:border-brandOrange/50 transition flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="relative w-full h-44 rounded-lg bg-brandBlack overflow-hidden mb-4 border border-brandGray">
+              <!-- png artwork tag -->
+              <img src="https://picsum.photos/400/400?random=4" alt="Artwork" class="w-full h-full object-cover">
+            </div>
+            <!-- Track title -->
+            <h5 class="text-lg font-bold text-white">Takuli Gubwata</h5>
+            <!-- Album title -->
+            <p class="text-xs text-brandOrange font-medium">Single Release</p>
+            <!-- Artist name -->
+            <p class="text-xs text-gray-400 mt-1">Artist: Phillip Lisomona</p>
+          </div>
 
-            // Pause all other audio tracks
-            document.querySelectorAll('audio').forEach(a => {
-                if (a.id !== audioId) {
-                    a.pause();
-                }
-            });
-            document.querySelectorAll('[id$="-btn"]').forEach(btn => {
-                if (btn.id !== buttonId) {
-                    btn.innerHTML = '<i class="fa-solid fa-play"></i> <span>Play Track</span>';
-                }
-            });
+          <div class="mt-5 space-y-3">
+            <!-- mp3 tag -->
+            <audio id="audio-s3" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"></audio>
 
-            if (audio.paused) {
-                audio.play();
-                button.innerHTML = '<i class="fa-solid fa-pause"></i> <span>Pause</span>';
-                if(overlayIcon) overlayIcon.className = 'fa-solid fa-pause text-3xl text-brand-orange';
-            } else {
-                audio.pause();
-                button.innerHTML = '<i class="fa-solid fa-play"></i> <span>Play Track</span>';
-                if(overlayIcon) overlayIcon.className = 'fa-solid fa-play text-3xl text-brand-orange';
-            }
+            <div class="flex items-center gap-3">
+              <!-- Play button -->
+              <button onclick="togglePlay('audio-s3', 'play-s3')" class="flex-1 py-2.5 bg-brandOrange text-black font-bold text-xs rounded-lg hover:bg-orange-500 transition flex items-center justify-center gap-2">
+                <i id="play-s3" class="fas fa-play"></i> Play Preview
+              </button>
+              <!-- Buy button -->
+              <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20buy%20the%20single%20Takuli%20Gubwata." 
+                 target="_blank"
+                 class="flex-1 py-2.5 border border-brandOrange text-brandOrange font-bold text-xs rounded-lg hover:bg-brandOrange hover:text-black transition flex items-center justify-center gap-1">
+                <i class="fas fa-shopping-cart"></i> Buy
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES OFFERED ================= -->
+  <section id="services" class="py-14 bg-brandDark border-t border-b border-brandGray px-4">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <h3 class="text-3xl font-black uppercase tracking-wide">
+        Music Production <span class="text-brandOrange">Booking</span>
+      </h3>
+      <p class="text-gray-300 font-medium text-lg">
+        Instrumental / Recording / Mixing
+      </p>
+      <p class="text-gray-400 text-sm max-w-xl mx-auto">
+        Professional studio audio engineering, arrangement, and mixing for gospel artists, choirs, and soloists.
+      </p>
+      <div class="pt-4">
+        <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20want%20to%20book%20a%20music%20production%20session." 
+           target="_blank" 
+           class="inline-block px-8 py-3 bg-brandOrange text-black font-extrabold rounded-lg hover:bg-orange-600 transition shadow-lg">
+          Book Production Session
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LESSONS SECTION ================= -->
+  <section id="lessons" class="py-14 px-4 max-w-4xl mx-auto text-center">
+    <div class="bg-gradient-to-r from-brandGray via-brandDark to-brandGray border border-brandOrange/30 rounded-2xl p-8 shadow-xl">
+      <h3 class="text-2xl md:text-3xl font-extrabold uppercase text-white tracking-wide">
+        Keyboard & Music Production <span class="text-brandOrange">Lessons</span>
+      </h3>
+      <p class="text-gray-300 mt-3 font-medium">
+        Enroll for beginner to advanced piano keyboard mastery, composition, and digital audio workstation setups.
+      </p>
+      <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20am%20interested%20in%20Keyboard%20and%20Music%20Production%20lessons." 
+         target="_blank"
+         class="inline-block mt-6 px-6 py-2.5 border-2 border-brandOrange text-brandOrange font-bold rounded-lg hover:bg-brandOrange hover:text-black transition">
+        Inquire for Lessons
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= QUICK CONTACT & FOOTER ================= -->
+  <footer id="contact" class="mt-auto bg-brandDark border-t border-brandOrange/30 pt-10 pb-6">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+      
+      <!-- Contact Buttons Bar (Sketch Layout) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+        <a href="https://wa.me/260971132818" target="_blank" class="py-3 bg-brandGray border border-brandOrange/20 hover:border-brandOrange rounded-xl font-bold text-sm text-white hover:text-brandOrange transition flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp text-brandOrange"></i> WhatsApp
+        </a>
+        <a href="tel:+260971132818" class="py-3 bg-brandGray border border-brandOrange/20 hover:border-brandOrange rounded-xl font-bold text-sm text-white hover:text-brandOrange transition flex items-center justify-center gap-2">
+          <i class="fas fa-phone text-brandOrange"></i> Phone
+        </a>
+        <a href="https://www.facebook.com/Philliplisomona" target="_blank" class="py-3 bg-brandGray border border-brandOrange/20 hover:border-brandOrange rounded-xl font-bold text-sm text-white hover:text-brandOrange transition flex items-center justify-center gap-2">
+          <i class="fab fa-facebook-f text-brandOrange"></i> Facebook
+        </a>
+        <a href="mailto:philliplisomonamusic@gmail.com" class="py-3 bg-brandGray border border-brandOrange/20 hover:border-brandOrange rounded-xl font-bold text-sm text-white hover:text-brandOrange transition flex items-center justify-center gap-2">
+          <i class="fas fa-envelope text-brandOrange"></i> Email
+        </a>
+      </div>
+
+      <div class="border-t border-brandGray pt-6 text-xs text-gray-400 space-y-1">
+        <p class="font-semibold text-gray-300">
+          Phillip Lisomona Music | All Rights Reserved
+        </p>
+        <p>Lusaka, Zambia • Phone: +260971132818 • Email: philliplisomonamusic@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Mobile Drawer Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Album Toggle Function (Tap Album to view tracks)
+    function toggleAlbum() {
+      const tracklist = document.getElementById('album-tracklist');
+      const chevron = document.getElementById('album-chevron');
+      tracklist.classList.toggle('hidden');
+      chevron.classList.toggle('rotate-180');
+    }
+
+    // Audio Play/Pause Controller
+    let currentAudio = null;
+    let currentIcon = null;
+
+    function togglePlay(audioId, iconId) {
+      const audio = document.getElementById(audioId);
+      const icon = document.getElementById(iconId);
+
+      if (currentAudio && currentAudio !== audio) {
+        currentAudio.pause();
+        if (currentIcon) {
+          currentIcon.className = 'fas fa-play text-xs';
         }
+      }
 
-        // UPDATE PROGRESS BAR & TIME DISPLAY
-        function setupAudioListeners(audioId, progressId, timeId, buttonId) {
-            const audio = document.getElementById(audioId);
-            const progress = document.getElementById(progressId);
-            const timeDisplay = document.getElementById(timeId);
+      if (audio.paused) {
+        audio.play();
+        icon.className = 'fas fa-pause text-xs';
+        currentAudio = audio;
+        currentIcon = icon;
+      } else {
+        audio.pause();
+        icon.className = 'fas fa-play text-xs';
+        currentAudio = null;
+        currentIcon = null;
+      }
 
-            if (!audio) return;
-
-            audio.addEventListener('timeupdate', () => {
-                if (audio.duration) {
-                    const pct = (audio.currentTime / audio.duration) * 100;
-                    progress.value = pct;
-
-                    const mins = Math.floor(audio.currentTime / 60);
-                    const secs = Math.floor(audio.currentTime % 60);
-                    timeDisplay.textContent = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-                }
-            });
-
-            audio.addEventListener('ended', () => {
-                const button = document.getElementById(buttonId);
-                if (button) button.innerHTML = '<i class="fa-solid fa-play"></i> <span>Play Track</span>';
-                progress.value = 0;
-                timeDisplay.textContent = '0:00';
-            });
-        }
-
-        function seekAudio(audioId, value) {
-            const audio = document.getElementById(audioId);
-            if (audio && audio.duration) {
-                audio.currentTime = (value / 100) * audio.duration;
-            }
-        }
-
-        // Initialize audio listeners
-        setupAudioListeners('track1-audio', 'track1-progress', 'track1-time', 'track1-btn');
-        setupAudioListeners('track2-audio', 'track2-progress', 'track2-time', 'track2-btn');
-    </script>
+      audio.onended = () => {
+        icon.className = 'fas fa-play text-xs';
+        currentAudio = null;
+        currentIcon = null;
+      };
+    }
+  </script>
 </body>
 </html>
