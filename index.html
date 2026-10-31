@@ -3,241 +3,212 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Phillip Lisomona Music | Official Website</title>
-<meta name="description" content="Official music website of Phillip Lisomona, gospel musician, music producer and entrepreneur based in Lusaka, Zambia.">
-<style>
-:root {
-  --black:#080808;
-  --dark:#121212;
-  --card:#191919;
-  --orange:#ff7200;
-  --white:#ffffff;
-  --grey:#aaa;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--black);
-  color:var(--white);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-}
-a{text-decoration:none;color:inherit}
-button{cursor:pointer;font-family:inherit}
-.container{width:90%;max-width:1200px;margin:auto}
+<meta name="description" content="Listen to gospel albums and singles by Phillip Lisomona, gospel musician and producer from Lusaka, Zambia.">
 
-/* HEADER */
+<style>
+:root{
+ --orange:#ff7200;
+ --black:#080808;
+ --dark:#111;
+ --card:#191919;
+ --white:#fff;
+ --grey:#aaa;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+ background:var(--black);color:var(--white);
+ font-family:Arial,sans-serif;line-height:1.6;
+ padding-bottom:100px;
+}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.container{width:92%;max-width:1200px;margin:auto}
 header{
-  background:#090909;
-  position:sticky;top:0;z-index:1000;
-  border-bottom:1px solid #292929;
+ background:#090909;border-bottom:1px solid #292929;
+ position:sticky;top:0;z-index:100;
 }
 .nav{
-  display:flex;align-items:center;
-  justify-content:space-between;
-  min-height:75px;
+ min-height:75px;display:flex;
+ justify-content:space-between;align-items:center;
 }
-.logo{
-  font-size:21px;font-weight:900;
-  letter-spacing:1px;color:white;
-}
+.logo{font-weight:900;font-size:21px}
 .logo span{color:var(--orange)}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{font-size:14px;color:#ddd}
-.nav-links a:hover{color:var(--orange)}
-.menu-btn{
-  display:none;background:none;border:none;
-  color:white;font-size:28px;
-}
+.navlinks{display:flex;gap:25px}
+.navlinks a{font-size:14px;color:#ddd}
+.navlinks a:hover{color:var(--orange)}
+.menu{display:none;background:none;color:white;border:0;font-size:27px}
 
-/* HERO */
 .hero{
-  min-height:570px;
-  display:flex;align-items:center;
-  background:
-  linear-gradient(90deg,#080808 5%,rgba(8,8,8,.92) 45%,rgba(8,8,8,.25)),
-  linear-gradient(0deg,#080808,transparent),
-  url('artist-photo.jpg') center/cover no-repeat;
+ min-height:480px;display:flex;align-items:center;
+ background:linear-gradient(90deg,#080808 5%,rgba(8,8,8,.85) 60%,rgba(8,8,8,.3)),
+ linear-gradient(0deg,#080808,transparent),
+ radial-gradient(circle at 75% 40%,#783400,#17100c 50%,#080808);
 }
-.hero-content{max-width:650px;padding:90px 0}
+.hero-content{padding:85px 0;max-width:700px}
 .tag{
-  display:inline-block;color:var(--orange);
-  border:1px solid var(--orange);
-  padding:7px 15px;border-radius:30px;
-  font-size:12px;letter-spacing:2px;
-  margin-bottom:20px;
+ color:var(--orange);border:1px solid var(--orange);
+ padding:6px 14px;border-radius:30px;
+ display:inline-block;font-size:12px;letter-spacing:2px;
 }
-.hero h1{
-  font-size:clamp(42px,7vw,76px);
-  line-height:1.08;font-weight:900;
-  margin-bottom:20px;
-}
-.hero h1 span{color:var(--orange)}
-.hero p{color:#ccc;font-size:17px;max-width:550px}
-.hero-buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.hero h1{font-size:clamp(42px,7vw,75px);line-height:1.1;margin:20px 0}
+.orange{color:var(--orange)}
+.hero p{color:#ccc;font-size:17px;max-width:580px}
 .btn{
-  display:inline-block;padding:13px 25px;
-  border-radius:5px;font-weight:bold;
-  border:1px solid var(--orange);
-  transition:.3s;
+ display:inline-block;border:0;border-radius:5px;
+ padding:12px 22px;font-weight:bold;
+ background:var(--orange);color:white;
 }
-.btn-primary{background:var(--orange);color:white}
-.btn-outline{color:white}
-.btn:hover{transform:translateY(-3px);background:#e65e00}
+.btn:hover{background:#df5e00}
+.outline{background:transparent;border:1px solid var(--orange)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
 
-/* GENERAL SECTIONS */
-section{padding:75px 0}
-.section-heading{
-  display:flex;align-items:center;
-  justify-content:space-between;
-  margin-bottom:32px;
-  gap:15px;
-}
-.section-heading h2{font-size:32px}
-.section-heading h2 span{color:var(--orange)}
-.section-heading p{color:var(--grey);font-size:13px}
-.line{width:55px;height:4px;background:var(--orange);margin-top:10px}
+section{padding:65px 0}
+.section-title{margin-bottom:28px}
+.section-title h2{font-size:31px}
+.section-title p{color:var(--grey);font-size:14px}
+.underline{height:4px;width:55px;background:var(--orange);margin-top:9px}
 
-/* MUSIC CARDS */
 .music-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
+ display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+ gap:22px;
 }
 .music-card{
-  background:var(--card);
-  border-radius:9px;overflow:hidden;
-  border:1px solid #282828;
-  transition:.3s;
+ background:var(--card);border:1px solid #292929;
+ border-radius:9px;overflow:hidden;transition:.25s;
 }
-.music-card:hover{
-  transform:translateY(-6px);
-  border-color:var(--orange);
-}
+.music-card:hover{transform:translateY(-5px);border-color:var(--orange)}
 .cover{
-  width:100%;aspect-ratio:1/1;
-  background:linear-gradient(135deg,#282828,#6a2800);
-  display:flex;align-items:center;
-  justify-content:center;position:relative;
-  overflow:hidden;
+ aspect-ratio:1;background:linear-gradient(135deg,#41200c,#151515);
+ display:flex;align-items:center;justify-content:center;
+ overflow:hidden;color:var(--orange);font-size:25px;font-weight:900;
+ text-align:center;padding:15px;
 }
 .cover img{width:100%;height:100%;object-fit:cover}
-.cover-placeholder{
-  text-align:center;padding:20px;
-  color:white;font-weight:900;font-size:24px;
+.music-info{padding:16px}
+.music-info h3{font-size:17px}
+.music-info p{font-size:13px;color:var(--grey)}
+.card-buttons{display:flex;gap:8px;margin-top:13px}
+.card-buttons button{
+ flex:1;border:0;border-radius:4px;padding:10px 5px;
+ font-size:12px;font-weight:bold;
 }
-.cover-placeholder span{display:block;color:var(--orange);font-size:13px}
-.music-info{padding:18px}
-.music-info h3{font-size:18px;margin-bottom:5px}
-.music-info p{color:var(--grey);font-size:13px}
-.music-actions{
-  display:flex;gap:8px;margin-top:15px;
+.play{background:var(--orange);color:white}
+.secondary{background:#333;color:white}
+.empty{
+ padding:35px;text-align:center;background:#141414;
+ border:1px dashed #555;border-radius:8px;color:#aaa;
+ grid-column:1/-1;
 }
-.play-btn,.buy-btn{
-  border:0;padding:10px 12px;
-  border-radius:4px;font-size:12px;font-weight:bold;
-}
-.play-btn{background:var(--orange);color:white;flex:1}
-.buy-btn{background:#333;color:white}
-.play-btn:hover,.buy-btn:hover{opacity:.8}
 
-/* TRACK LIST */
-.tracks{
-  background:#111;padding:70px 0;
-}
+.tracks-section{background:#111}
 .track{
-  display:flex;align-items:center;
-  justify-content:space-between;
-  padding:15px 18px;
-  border-bottom:1px solid #303030;
-  gap:15px;
+ display:flex;align-items:center;justify-content:space-between;
+ padding:14px 15px;border-bottom:1px solid #303030;gap:12px;
 }
 .track:hover{background:#1b1b1b}
-.track-left{display:flex;align-items:center;gap:15px}
-.track-number{color:var(--orange);font-weight:bold}
-.track-name{font-weight:bold}
-.track-artist{font-size:12px;color:var(--grey)}
+.track-info{display:flex;align-items:center;gap:13px;min-width:0}
+.track-num{color:var(--orange);font-weight:bold}
+.track-name{font-weight:bold;overflow-wrap:anywhere}
+.track-sub{font-size:12px;color:#999}
 .track button{
-  background:var(--orange);border:0;
-  color:white;padding:9px 15px;border-radius:4px;
+ border:0;background:var(--orange);color:white;
+ border-radius:4px;padding:8px 13px;
 }
-
-/* ABOUT */
 .about{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:50px;align-items:center;
+ display:grid;grid-template-columns:1fr 1fr;
+ gap:40px;align-items:center;
 }
-.about-image{
-  min-height:380px;background:
-  linear-gradient(135deg,#4a2000,#171717);
-  display:flex;align-items:center;
-  justify-content:center;border-radius:10px;
-  overflow:hidden;
+.about-photo{
+ min-height:320px;border-radius:10px;
+ display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(135deg,#693000,#151515);
+ color:var(--orange);font-size:30px;font-weight:bold;
+ overflow:hidden;
 }
-.about-image img{width:100%;height:100%;object-fit:cover}
-.about-image span{font-size:30px;font-weight:900;color:var(--orange)}
-.about-text h2{font-size:36px;margin-bottom:20px}
-.about-text h2 span{color:var(--orange)}
-.about-text p{color:#bbb;margin-bottom:15px}
-
-/* CONTACT */
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.about p{color:#bbb;margin:15px 0}
 .contact{
-  background:linear-gradient(135deg,#201006,#090909);
-  text-align:center;
-  border-top:1px solid #302016;
-  border-bottom:1px solid #302016;
+ text-align:center;background:linear-gradient(135deg,#301500,#080808);
 }
-.contact h2{font-size:35px;margin-bottom:15px}
-.contact h2 span{color:var(--orange)}
-.contact p{color:#bbb;margin-bottom:25px}
-.contact-links{
-  display:flex;justify-content:center;
-  flex-wrap:wrap;gap:15px;
-}
-.contact-links a{
-  padding:13px 20px;border:1px solid #555;
-  border-radius:5px;
-}
-.contact-links a:hover{background:var(--orange);border-color:var(--orange)}
+.contact p{color:#bbb;margin:12px 0 25px}
+.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-links a{padding:11px 18px;border:1px solid #555;border-radius:5px}
+.contact-links a:hover{background:var(--orange)}
 
-/* PLAYER */
-.player{
-  position:fixed;bottom:0;left:0;width:100%;
-  background:#1b1b1b;
-  border-top:2px solid var(--orange);
-  padding:12px 5%;
-  display:none;align-items:center;
-  justify-content:space-between;gap:15px;
-  z-index:2000;
+footer{text-align:center;padding:30px;color:#999;font-size:13px}
+
+/* ADMIN */
+.admin-section{background:#101010;border-top:2px solid var(--orange)}
+.admin-box{
+ background:#191919;border:1px solid #333;
+ padding:22px;border-radius:9px;
 }
-.player-info{min-width:0}
+.admin-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+.tab{
+ padding:10px 17px;border:1px solid #555;
+ background:#222;color:white;border-radius:5px;
+}
+.tab.active{background:var(--orange);border-color:var(--orange)}
+.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;color:#ddd}
+.field input,.field textarea{
+ width:100%;background:#090909;color:white;
+ border:1px solid #444;border-radius:5px;padding:12px;
+}
+.field input[type=file]{padding:9px}
+.field textarea{min-height:85px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:1px solid var(--orange)}
+.help{font-size:12px;color:#aaa}
+.admin-list{margin-top:25px}
+.admin-item{
+ display:flex;align-items:center;justify-content:space-between;
+ gap:10px;padding:13px;border-bottom:1px solid #333;
+}
+.admin-item button{
+ background:#a52b1e;color:white;border:0;
+ padding:8px 12px;border-radius:4px;
+}
+.notice{
+ background:#30200e;border:1px solid #9b5300;
+ padding:13px;border-radius:6px;margin:15px 0;
+ font-size:13px;color:#ffd6ae;
+}
+.hidden{display:none!important}
+#search{
+ background:#151515;color:white;border:1px solid #444;
+ padding:12px;border-radius:5px;width:100%;max-width:400px;
+ margin-bottom:20px;
+}
+.player{
+ position:fixed;bottom:0;left:0;width:100%;
+ background:#171717;border-top:3px solid var(--orange);
+ padding:12px 4%;z-index:200;
+ display:none;align-items:center;justify-content:space-between;gap:15px;
+}
+.player-info{min-width:120px}
 .player-info strong{display:block}
 .player-info small{color:#aaa}
-.player audio{max-width:450px;width:55%}
-.close-player{
-  background:none;border:0;color:white;font-size:22px;
-}
-footer{
-  padding:30px 0;text-align:center;
-  color:#888;font-size:13px;
-}
-footer span{color:var(--orange)}
-@media(max-width:768px){
-  .menu-btn{display:block}
-  .nav-links{
-    display:none;position:absolute;top:75px;
-    left:0;width:100%;background:#111;
-    flex-direction:column;align-items:flex-start;
-    padding:25px 5%;gap:20px;
-  }
-  .nav-links.active{display:flex}
-  .hero{min-height:500px}
-  .about{grid-template-columns:1fr}
-  .about-image{min-height:280px}
-  .section-heading{align-items:flex-start;flex-direction:column}
-  .player{flex-wrap:wrap}
-  .player audio{width:100%;max-width:none}
+.player audio{width:48%;max-width:500px}
+.player button{background:none;border:0;color:white;font-size:23px}
+.player-controls{display:flex;align-items:center;gap:10px}
+@media(max-width:700px){
+ .menu{display:block}
+ .navlinks{
+  display:none;position:absolute;top:75px;left:0;width:100%;
+  background:#111;padding:20px;flex-direction:column;gap:15px;
+ }
+ .navlinks.show{display:flex}
+ .about{grid-template-columns:1fr}
+ .admin-form{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .player{flex-wrap:wrap}
+ .player audio{width:100%;max-width:none;order:3}
+ .player-info{flex:1}
 }
 </style>
 </head>
@@ -246,311 +217,669 @@ footer span{color:var(--orange)}
 
 <header>
  <div class="container nav">
-  <a href="#" class="logo">PHILLIP <span>LISOMONA</span></a>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <nav class="nav-links" id="navLinks">
+  <a class="logo" href="#home">PHILLIP <span>LISOMONA</span></a>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav class="navlinks" id="navlinks">
    <a href="#home" onclick="closeMenu()">Home</a>
    <a href="#albums" onclick="closeMenu()">Albums</a>
    <a href="#singles" onclick="closeMenu()">Singles</a>
-   <a href="#about" onclick="closeMenu()">About Artist</a>
+   <a href="#about" onclick="closeMenu()">About</a>
    <a href="#contact" onclick="closeMenu()">Contact</a>
+   <a href="#admin" onclick="closeMenu()">Admin</a>
   </nav>
  </div>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="home">
- <div class="container">
-  <div class="hero-content">
-   <span class="tag">OFFICIAL MUSIC WEBSITE</span>
-   <h1>WELCOME TO<br><span>MY MUSIC</span></h1>
-   <p>
-    Experience inspiring gospel music through albums and singles
-    from Phillip Lisomona. Music that inspires, uplifts and
-    glorifies God.
-   </p>
-   <div class="hero-buttons">
-    <a href="#albums" class="btn btn-primary">Explore Albums</a>
-    <a href="#singles" class="btn btn-outline">Listen to Singles</a>
-   </div>
+ <div class="container hero-content">
+  <span class="tag">OFFICIAL MUSIC PLATFORM</span>
+  <h1>WELCOME TO<br><span class="orange">MY MUSIC</span></h1>
+  <p>
+   Experience inspiring gospel music from Phillip Lisomona.
+   Discover albums, singles and uplifting songs that glorify God.
+  </p>
+  <div class="hero-actions">
+   <a href="#albums" class="btn">Explore Albums</a>
+   <a href="#singles" class="btn outline">Listen to Singles</a>
   </div>
  </div>
 </section>
 
-<!-- ALBUMS -->
 <section id="albums">
  <div class="container">
-  <div class="section-heading">
-   <div>
-    <h2>Featured <span>Albums</span></h2>
-    <div class="line"></div>
-   </div>
-   <p>Explore the latest album releases</p>
+  <div class="section-title">
+   <h2>Featured <span class="orange">Albums</span></h2>
+   <div class="underline"></div>
+   <p>Discover gospel albums and their tracks.</p>
   </div>
   <div class="music-grid" id="albumGrid"></div>
  </div>
 </section>
 
-<!-- SINGLES -->
 <section id="singles" style="background:#111">
  <div class="container">
-  <div class="section-heading">
-   <div>
-    <h2>Latest <span>Singles</span></h2>
-    <div class="line"></div>
-   </div>
-   <p>Listen to individual gospel tracks</p>
+  <div class="section-title">
+   <h2>Latest <span class="orange">Singles</span></h2>
+   <div class="underline"></div>
+   <p>Listen to individual gospel releases.</p>
   </div>
   <div class="music-grid" id="singleGrid"></div>
  </div>
 </section>
 
-<!-- TRACKS -->
-<section class="tracks">
+<section class="tracks-section" id="popular">
  <div class="container">
-  <div class="section-heading">
-   <div>
-    <h2>Popular <span>Tracks</span></h2>
-    <div class="line"></div>
-   </div>
+  <div class="section-title">
+   <h2>Music <span class="orange">Library</span></h2>
+   <div class="underline"></div>
+   <p>Search and play available music.</p>
   </div>
+  <input id="search" type="search" placeholder="Search songs or albums..." oninput="renderTracks()">
   <div id="trackList"></div>
  </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
  <div class="container about">
-  <div class="about-image">
-   <img src="artist-photo.jpg" alt="Phillip Lisomona"
-   onerror="this.style.display='none';this.parentElement.innerHTML='<span>PHILLIP LISOMONA</span>'">
+  <div class="about-photo" id="artistPhoto">
+   PHILLIP LISOMONA
   </div>
-  <div class="about-text">
-   <h2>About <span>The Artist</span></h2>
+  <div>
+   <div class="section-title">
+    <h2>About <span class="orange">The Artist</span></h2>
+    <div class="underline"></div>
+   </div>
    <p>
     Phillip Lisomona is a renowned gospel musician of the
     Seventh-day Adventist Church based in Lusaka, Zambia.
    </p>
    <p>
     He is a gospel artist, music producer and entrepreneur
-    passionate about using music to spread the message of
-    hope, faith and inspiration.
+    passionate about using music to share messages of faith,
+    hope and inspiration.
    </p>
-   <p>
-    Welcome to his official music platform, where you can
-    discover albums, listen to singles and enjoy uplifting
-    gospel music.
-   </p>
-   <a href="#contact" class="btn btn-primary">Get In Touch</a>
+   <p>Welcome to his official music platform.</p>
+   <a class="btn" href="#contact">Contact Artist</a>
   </div>
  </div>
 </section>
 
-<!-- CONTACT -->
 <section class="contact" id="contact">
  <div class="container">
-  <h2>Connect With <span>Phillip</span></h2>
-  <p>For music enquiries, bookings, collaborations and other business opportunities.</p>
+  <h2>Connect With <span class="orange">Phillip</span></h2>
+  <p>Bookings, music enquiries and collaborations.</p>
   <div class="contact-links">
-   <a href="tel:+260971132818">☎ Call: +260971132818</a>
-   <a href="mailto:philliplisomonamusic@gmail.com">✉ Email</a>
-   <a href="https://www.facebook.com/Philliplisomona" target="_blank">Facebook</a>
+   <a href="tel:+260971132818">Call Artist</a>
    <a href="https://wa.me/260971132818" target="_blank">WhatsApp</a>
+   <a href="mailto:philliplisomonamusic@gmail.com">Email</a>
+   <a href="https://www.facebook.com/Philliplisomona" target="_blank">Facebook</a>
+  </div>
+ </div>
+</section>
+
+<!-- ADMIN DASHBOARD -->
+<section class="admin-section" id="admin">
+ <div class="container">
+  <div class="section-title">
+   <h2>Music <span class="orange">Admin Dashboard</span></h2>
+   <div class="underline"></div>
+   <p>Upload and manage your music directly from this website.</p>
+  </div>
+
+  <div class="notice">
+   Admin tools are local to this browser. This version has no
+   secure online administrator login or shared cloud database.
+   Do not use it as a public production admin system.
+  </div>
+
+  <div class="admin-box">
+   <div class="admin-tabs">
+    <button class="tab active" id="albumTab" onclick="showForm('album')">Upload Album</button>
+    <button class="tab" id="singleTab" onclick="showForm('single')">Upload Single</button>
+    <button class="tab" id="manageTab" onclick="showForm('manage')">Manage Music</button>
+   </div>
+
+   <!-- ALBUM FORM -->
+   <form id="albumForm" class="admin-form">
+    <div class="field">
+     <label>Album Title *</label>
+     <input id="albumTitle" required placeholder="Enter album name">
+    </div>
+    <div class="field">
+     <label>Release Year</label>
+     <input id="albumYear" placeholder="2026">
+    </div>
+    <div class="field full">
+     <label>Album Description</label>
+     <textarea id="albumDescription" placeholder="Album description"></textarea>
+    </div>
+    <div class="field full">
+     <label>Album Cover Image *</label>
+     <input id="albumCover" type="file" accept="image/*" required>
+    </div>
+    <div class="field full">
+     <label>Upload Album MP3 Tracks *</label>
+     <input id="albumTracks" type="file" accept="audio/mpeg,audio/*" multiple required>
+     <span class="help">Select multiple MP3 songs for this album.</span>
+    </div>
+    <div class="field full">
+     <button class="btn" type="submit">Save Album & Tracks</button>
+    </div>
+   </form>
+
+   <!-- SINGLE FORM -->
+   <form id="singleForm" class="admin-form hidden">
+    <div class="field full">
+     <label>Song Title *</label>
+     <input id="singleTitle" required placeholder="Enter song title">
+    </div>
+    <div class="field full">
+     <label>Single Cover Image *</label>
+     <input id="singleCover" type="file" accept="image/*" required>
+    </div>
+    <div class="field full">
+     <label>Upload MP3 Song *</label>
+     <input id="singleAudio" type="file" accept="audio/mpeg,audio/*" required>
+    </div>
+    <div class="field full">
+     <label>Description</label>
+     <textarea id="singleDescription" placeholder="Song description"></textarea>
+    </div>
+    <div class="field full">
+     <button class="btn" type="submit">Save Single</button>
+    </div>
+   </form>
+
+   <!-- MANAGE FORM -->
+   <div id="manageForm" class="hidden">
+    <h3>Uploaded Music</h3>
+    <p class="help">Delete albums or individual singles below.</p>
+    <div class="admin-list" id="adminList"></div>
+   </div>
   </div>
  </div>
 </section>
 
 <footer>
- <div class="container">
-  © <span id="year"></span> Phillip Lisomona Music.
-  All Rights Reserved.
-  <br>Official Gospel Music Platform.
- </div>
+ © <span id="year"></span> Phillip Lisomona Music.
+ All Rights Reserved.
 </footer>
 
-<!-- MUSIC PLAYER -->
+<!-- FIXED PLAYER -->
 <div class="player" id="player">
  <div class="player-info">
   <strong id="nowPlaying">Now Playing</strong>
-  <small>Phillip Lisomona Music</small>
+  <small>Phillip Lisomona</small>
  </div>
- <audio id="audioPlayer" controls></audio>
- <button class="close-player" onclick="stopMusic()">×</button>
+ <div class="player-controls">
+  <button onclick="previousTrack()" title="Previous">⏮</button>
+  <button onclick="togglePlay()" id="playPause" title="Play/Pause">Ⅱ</button>
+  <button onclick="nextTrack()" title="Next">⏭</button>
+  <button onclick="closePlayer()" title="Close">×</button>
+ </div>
+ <audio id="audio" controls></audio>
 </div>
 
 <script>
-// ===================================
-// MUSIC DATABASE
-// Replace cover and audio filenames
-// with your actual uploaded files.
-// ===================================
+/* =================================
+   PHILLIP LISOMONA MUSIC DATABASE
+   IndexedDB stores uploaded files.
+================================= */
 
-const albums = [
- {
-  title:"Album Title One",
-  year:"2026",
-  cover:"album1.jpg",
-  description:"Gospel Music Album",
-  tracks:[
-   {name:"Track One",audio:"music/track1.mp3"},
-   {name:"Track Two",audio:"music/track2.mp3"},
-   {name:"Track Three",audio:"music/track3.mp3"}
-  ]
- },
- {
-  title:"Album Title Two",
-  year:"2025",
-  cover:"album2.jpg",
-  description:"Inspirational Gospel",
-  tracks:[
-   {name:"Track One",audio:"music/track4.mp3"},
-   {name:"Track Two",audio:"music/track5.mp3"}
-  ]
- }
-];
+const DB_NAME = "PhillipLisomonaMusic";
+const DB_VERSION = 1;
+let db;
+let currentQueue = [];
+let currentIndex = 0;
+let currentUrl = null;
+let previewMode = false;
+const audio = document.getElementById("audio");
 
-const singles = [
- {
-  title:"Single Track One",
-  cover:"single1.jpg",
-  audio:"music/single1.mp3"
- },
- {
-  title:"Single Track Two",
-  cover:"single2.jpg",
-  audio:"music/single2.mp3"
- },
- {
-  title:"Single Track Three",
-  cover:"single3.jpg",
-  audio:"music/single3.mp3"
- }
-];
+function openDatabase(){
+ return new Promise((resolve,reject)=>{
+  const request=indexedDB.open(DB_NAME,DB_VERSION);
 
-const whatsapp = "https://wa.me/260971132818";
+  request.onupgradeneeded=event=>{
+   const database=event.target.result;
+   if(!database.objectStoreNames.contains("music")){
+    database.createObjectStore("music",{keyPath:"id"});
+   }
+  };
 
-// Album display
-function renderAlbums(){
- const grid=document.getElementById("albumGrid");
- grid.innerHTML=albums.map((album,index)=>`
-  <div class="music-card">
-   <div class="cover">
-    <img src="${album.cover}" alt="${album.title}"
-    onerror="this.style.display='none';this.parentElement.innerHTML='<div class=cover-placeholder>${album.title}<span>PHILLIP LISOMONA</span></div>'">
-   </div>
-   <div class="music-info">
-    <h3>${album.title}</h3>
-    <p>${album.year} • ${album.tracks.length} Tracks</p>
-    <div class="music-actions">
-     <button class="play-btn" onclick="playAlbum(${index})">▶ Play Album</button>
-     <a class="buy-btn" href="${whatsapp}?text=${encodeURIComponent('I would like to purchase '+album.title)}">Buy</a>
-    </div>
-   </div>
-  </div>
- `).join("");
+  request.onsuccess=event=>{
+   db=event.target.result;
+   resolve(db);
+  };
+  request.onerror=()=>reject(request.error);
+ });
 }
 
-// Singles display
-function renderSingles(){
- const grid=document.getElementById("singleGrid");
- grid.innerHTML=singles.map((song,index)=>`
-  <div class="music-card">
-   <div class="cover">
-    <img src="${song.cover}" alt="${song.title}"
-    onerror="this.style.display='none';this.parentElement.innerHTML='<div class=cover-placeholder>${song.title}<span>PHILLIP LISOMONA</span></div>'">
-   </div>
-   <div class="music-info">
-    <h3>${song.title}</h3>
-    <p>Official Gospel Single</p>
-    <div class="music-actions">
-     <button class="play-btn" onclick="playSingle(${index})">▶ Listen</button>
-     <a class="buy-btn" href="${whatsapp}?text=${encodeURIComponent('I would like to purchase '+song.title)}">Buy</a>
-    </div>
-   </div>
-  </div>
- `).join("");
+function saveItem(item){
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction("music","readwrite");
+  tx.objectStore("music").put(item);
+  tx.oncomplete=()=>resolve();
+  tx.onerror=()=>reject(tx.error);
+ });
 }
 
-// Player
-const audio=document.getElementById("audioPlayer");
-let albumQueue=[];
-let queueIndex=0;
+function getAll(){
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction("music","readonly");
+  const request=tx.objectStore("music").getAll();
+  request.onsuccess=()=>resolve(request.result);
+  request.onerror=()=>reject(request.error);
+ });
+}
 
-function playMusic(name,src){
- if(!src)return;
- document.getElementById("nowPlaying").textContent=name;
+function deleteItem(id){
+ return new Promise((resolve,reject)=>{
+  const tx=db.transaction("music","readwrite");
+  tx.objectStore("music").delete(id);
+  tx.oncomplete=()=>resolve();
+  tx.onerror=()=>reject(tx.error);
+ });
+}
+
+function makeId(){
+ return crypto.randomUUID ?
+  crypto.randomUUID() :
+  Date.now()+"-"+Math.random().toString(16).slice(2);
+}
+
+/* HELPERS */
+
+function el(tag,cls,text){
+ const node=document.createElement(tag);
+ if(cls)node.className=cls;
+ if(text!==undefined)node.textContent=text;
+ return node;
+}
+
+function addImage(container,blob,alt){
+ const img=document.createElement("img");
+ img.alt=alt;
+ const url=URL.createObjectURL(blob);
+ img.src=url;
+ container.appendChild(img);
+ img.addEventListener("load",()=>URL.revokeObjectURL(url),{once:true});
+ img.addEventListener("error",()=>URL.revokeObjectURL(url),{once:true});
+}
+
+function makeButton(text,cls,action){
+ const b=el("button",cls,text);
+ b.type="button";
+ b.addEventListener("click",action);
+ return b;
+}
+
+function addCard(container,item){
+ const card=el("article","music-card");
+ const cover=el("div","cover");
+ if(item.cover)addImage(cover,item.cover,item.title);
+ else cover.textContent="PHILLIP LISOMONA";
+
+ const info=el("div","music-info");
+ const title=el("h3","",item.title);
+ const description=el("p","",
+  item.type==="album"
+   ? (item.year||"") + " • " + item.tracks.length+" Tracks"
+   : "Official Gospel Single"
+ );
+
+ const buttons=el("div","card-buttons");
+
+ if(item.type==="album"){
+  buttons.appendChild(makeButton("▶ PLAY ALBUM","play",()=>{
+   playQueue(item.tracks.map(t=>({
+    id:t.id,title:t.title,blob:t.blob,group:item.title
+   })),0,false);
+  }));
+ }else{
+  buttons.appendChild(makeButton("▶ LISTEN","play",()=>{
+   playQueue([{
+    id:item.id,title:item.title,blob:item.audio,group:"Single"
+   }],0,false);
+  }));
+ }
+
+ buttons.appendChild(makeButton("BUY / ENQUIRE","secondary",()=>{
+  const msg=encodeURIComponent("Hello, I would like to enquire about "+item.title);
+  window.open("https://wa.me/260971132818?text="+msg,"_blank");
+ }));
+
+ info.append(title,description,buttons);
+ card.append(cover,info);
+ container.appendChild(card);
+}
+
+/* RENDER MUSIC */
+
+async function renderMusic(){
+ const items=await getAll();
+ const albumGrid=document.getElementById("albumGrid");
+ const singleGrid=document.getElementById("singleGrid");
+
+ albumGrid.replaceChildren();
+ singleGrid.replaceChildren();
+
+ const albums=items.filter(x=>x.type==="album");
+ const singles=items.filter(x=>x.type==="single");
+
+ if(!albums.length){
+  albumGrid.appendChild(el("div","empty","No albums uploaded yet. Visit the Admin Dashboard to add albums."));
+ }
+ if(!singles.length){
+  singleGrid.appendChild(el("div","empty","No singles uploaded yet. Visit the Admin Dashboard to add songs."));
+ }
+
+ albums.forEach(item=>addCard(albumGrid,item));
+ singles.forEach(item=>addCard(singleGrid,item));
+
+ renderTracks();
+ renderAdminList(items);
+}
+
+/* SEARCH AND TRACK LIST */
+
+async function renderTracks(){
+ const items=await getAll();
+ const list=document.getElementById("trackList");
+ const search=document.getElementById("search").value.toLowerCase().trim();
+ list.replaceChildren();
+
+ let tracks=[];
+
+ items.forEach(item=>{
+  if(item.type==="album"){
+   item.tracks.forEach(t=>tracks.push({
+    ...t,group:item.title
+   }));
+  }else{
+   tracks.push({
+    id:item.id,title:item.title,blob:item.audio,
+    group:"Single"
+   });
+  }
+ });
+
+ tracks=tracks.filter(t=>
+  t.title.toLowerCase().includes(search) ||
+  t.group.toLowerCase().includes(search)
+ );
+
+ if(!tracks.length){
+  list.appendChild(el("div","empty","No matching music found."));
+  return;
+ }
+
+ tracks.forEach((track,index)=>{
+  const row=el("div","track");
+  const left=el("div","track-info");
+  left.append(
+   el("span","track-num",String(index+1).padStart(2,"0")),
+   (() => {
+    const wrap=el("div");
+    wrap.append(
+     el("div","track-name",track.title),
+     el("div","track-sub",track.group)
+    );
+    return wrap;
+   })()
+  );
+  row.append(left,makeButton("▶ Play","",()=>{
+   playQueue(tracks,index,false);
+  }));
+  list.appendChild(row);
+ });
+}
+
+/* MUSIC PLAYER */
+
+function playQueue(queue,index=0,preview=false){
+ currentQueue=queue;
+ currentIndex=index;
+ previewMode=preview;
+ playCurrent();
+}
+
+function playCurrent(){
+ if(!currentQueue.length)return;
+
+ const track=currentQueue[currentIndex];
+ if(!track)return;
+
+ if(currentUrl)URL.revokeObjectURL(currentUrl);
+ currentUrl=URL.createObjectURL(track.blob);
+
+ audio.pause();
+ audio.src=currentUrl;
+ audio.currentTime=0;
+
+ document.getElementById("nowPlaying").textContent=track.title;
  document.getElementById("player").style.display="flex";
- audio.src=src;
- audio.play().catch(()=>alert("Please check that the audio file exists."));
+ document.getElementById("playPause").textContent="Ⅱ";
+
+ audio.play().catch(()=>{
+  alert("Unable to play this file. Please check the audio format.");
+ });
 }
 
-function playSingle(index){
- const song=singles[index];
- playMusic(song.title,song.audio);
+function togglePlay(){
+ if(audio.paused){
+  audio.play();
+ }else{
+  audio.pause();
+ }
 }
 
-function playAlbum(index){
- albumQueue=albums[index].tracks;
- queueIndex=0;
- playCurrentTrack();
+audio.addEventListener("play",()=>{
+ document.getElementById("playPause").textContent="Ⅱ";
+});
+audio.addEventListener("pause",()=>{
+ document.getElementById("playPause").textContent="▶";
+});
+
+function nextTrack(){
+ if(currentIndex<currentQueue.length-1){
+  currentIndex++;
+  playCurrent();
+ }else{
+  audio.pause();
+ }
 }
 
-function playCurrentTrack(){
- if(queueIndex>=albumQueue.length)return;
- const track=albumQueue[queueIndex];
- playMusic(track.name,track.audio);
+function previousTrack(){
+ if(audio.currentTime>3){
+  audio.currentTime=0;
+ }else if(currentIndex>0){
+  currentIndex--;
+  playCurrent();
+ }
 }
 
 audio.addEventListener("ended",()=>{
- if(albumQueue.length && queueIndex<albumQueue.length-1){
-  queueIndex++;
-  playCurrentTrack();
+ if(previewMode){
+  audio.pause();
+  return;
+ }
+ if(currentIndex<currentQueue.length-1){
+  currentIndex++;
+  playCurrent();
  }
 });
 
-function stopMusic(){
+/* PREVIEW: stop after 30 seconds */
+
+audio.addEventListener("timeupdate",()=>{
+ if(previewMode && audio.currentTime>=30){
+  audio.pause();
+  audio.currentTime=30;
+ }
+});
+
+function closePlayer(){
  audio.pause();
  audio.removeAttribute("src");
  audio.load();
+ if(currentUrl)URL.revokeObjectURL(currentUrl);
+ currentUrl=null;
+ currentQueue=[];
  document.getElementById("player").style.display="none";
- albumQueue=[];
 }
 
-// Popular tracks
-function renderTracks(){
- const allTracks=[
-  ...albums.flatMap(a=>a.tracks),
-  ...singles.map(s=>({name:s.title,audio:s.audio}))
- ];
- document.getElementById("trackList").innerHTML=
- allTracks.map((track,index)=>`
-  <div class="track">
-   <div class="track-left">
-    <span class="track-number">${String(index+1).padStart(2,"0")}</span>
-    <div>
-     <div class="track-name">${track.name}</div>
-     <div class="track-artist">Phillip Lisomona</div>
-    </div>
-   </div>
-   <button onclick="playMusic('${track.name.replace(/'/g,"\\'")}','${track.audio}')">▶ Play</button>
-  </div>
- `).join("");
+/* ADMIN NAVIGATION */
+
+function showForm(type){
+ const sections={
+  album:document.getElementById("albumForm"),
+  single:document.getElementById("singleForm"),
+  manage:document.getElementById("manageForm")
+ };
+ Object.keys(sections).forEach(key=>{
+  sections[key].classList.toggle("hidden",key!==type);
+ });
+ document.querySelectorAll(".tab").forEach(tab=>tab.classList.remove("active"));
+ document.getElementById(
+  type==="album"?"albumTab":type==="single"?"singleTab":"manageTab"
+ ).classList.add("active");
 }
 
-// Navigation
+/* UPLOAD ALBUM */
+
+document.getElementById("albumForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+
+ const title=document.getElementById("albumTitle").value.trim();
+ const year=document.getElementById("albumYear").value.trim();
+ const description=document.getElementById("albumDescription").value.trim();
+ const cover=document.getElementById("albumCover").files[0];
+ const files=Array.from(document.getElementById("albumTracks").files);
+
+ if(!title||!cover||!files.length){
+  alert("Please provide an album title, cover and MP3 tracks.");
+  return;
+ }
+
+ if(!cover.type.startsWith("image/")||
+    files.some(f=>!f.type.startsWith("audio/"))){
+  alert("Please select a valid image and audio files.");
+  return;
+ }
+
+ const tracks=files.map(file=>({
+  id:makeId(),
+  title:file.name.replace(/\.[^.]+$/,"").replace(/[_-]/g," "),
+  blob:file
+ }));
+
+ const album={
+  id:makeId(),type:"album",title,year,description,
+  cover,tracks,createdAt:Date.now()
+ };
+
+ try{
+  await saveItem(album);
+  e.target.reset();
+  await renderMusic();
+  alert("Album and tracks uploaded successfully!");
+ }catch(err){
+  console.error(err);
+  alert("Could not save the album. Check available browser storage.");
+ }
+});
+
+/* UPLOAD SINGLE */
+
+document.getElementById("singleForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+
+ const title=document.getElementById("singleTitle").value.trim();
+ const cover=document.getElementById("singleCover").files[0];
+ const audioFile=document.getElementById("singleAudio").files[0];
+ const description=document.getElementById("singleDescription").value.trim();
+
+ if(!title||!cover||!audioFile){
+  alert("Please fill in all required fields.");
+  return;
+ }
+
+ if(!cover.type.startsWith("image/")||!audioFile.type.startsWith("audio/")){
+  alert("Select a valid image and audio file.");
+  return;
+ }
+
+ const single={
+  id:makeId(),type:"single",title,cover,
+  audio:audioFile,description,createdAt:Date.now()
+ };
+
+ try{
+  await saveItem(single);
+  e.target.reset();
+  await renderMusic();
+  alert("Single uploaded successfully!");
+ }catch(err){
+  console.error(err);
+  alert("Could not save the single. Check available browser storage.");
+ }
+});
+
+/* ADMIN MUSIC MANAGEMENT */
+
+async function renderAdminList(items){
+ const list=document.getElementById("adminList");
+ list.replaceChildren();
+
+ if(!items.length){
+  list.appendChild(el("p","empty","No music has been uploaded."));
+  return;
+ }
+
+ items.forEach(item=>{
+  const row=el("div","admin-item");
+  const name=el("div");
+  name.append(
+   el("strong","",item.title),
+   el("div","track-sub",item.type==="album"?"Album":"Single")
+  );
+  const del=makeButton("Delete","",async()=>{
+   if(!confirm("Permanently delete "+item.title+"?"))return;
+   await deleteItem(item.id);
+   await renderMusic();
+  });
+  row.append(name,del);
+  list.appendChild(row);
+ });
+}
+
+/* ARTIST PHOTO
+   Optional: upload artist photo from admin
+   in a future cloud-enabled version.
+*/
+
+/* NAVIGATION */
+
 function toggleMenu(){
- document.getElementById("navLinks").classList.toggle("active");
+ document.getElementById("navlinks").classList.toggle("show");
 }
 function closeMenu(){
- document.getElementById("navLinks").classList.remove("active");
+ document.getElementById("navlinks").classList.remove("show");
 }
 
 document.getElementById("year").textContent=new Date().getFullYear();
 
-renderAlbums();
-renderSingles();
-renderTracks();
-</script>
+/* START WEBSITE */
 
+(async()=>{
+ try{
+  await openDatabase();
+  await renderMusic();
+ }catch(error){
+  console.error(error);
+  alert("Your browser could not open the music database. Please use an updated browser.");
+ }
+})();
+</script>
 </body>
 </html>
