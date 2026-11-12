@@ -55,7 +55,11 @@
                 <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm tracking-wide">
                     <a href="#home" onclick="filterCategory('All')" class="text-red-500 hover:text-red-400 transition-colors nav-link active" data-cat="All">HOME</a>
                     <a href="#albums" onclick="filterCategory('Album')" class="text-slate-300 hover:text-red-400 transition-colors nav-link" data-cat="Album">ALBUMS (v1-v7)</a>
-                    <a href="#contact" onclick="openContactModal()" class="text-slate-300 hover:text-red-400 transition-colors">CONTACT</a>
+                    <a href="#contact-dashboard" class="text-slate-300 hover:text-red-400 transition-colors">CONTACT DASHBOARD</a>
+                    <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-red-600/30 flex items-center space-x-2">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <span>Payza Album Checkout</span>
+                    </a>
                 </nav>
 
                 <div class="flex items-center space-x-4">
@@ -72,7 +76,10 @@
         <div id="mobileMenu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
             <a href="#home" onclick="filterCategory('All'); toggleMobileMenu();" class="block text-red-500 font-semibold py-1">HOME</a>
             <a href="#albums" onclick="filterCategory('Album'); toggleMobileMenu();" class="block text-slate-300 hover:text-red-400 font-semibold py-1">ALBUMS (v1-v7)</a>
-            <a href="#contact" onclick="openContactModal(); toggleMobileMenu();" class="block text-slate-300 hover:text-red-400 font-semibold py-1">CONTACT</a>
+            <a href="#contact-dashboard" onclick="toggleMobileMenu();" class="block text-slate-300 hover:text-red-400 font-semibold py-1">CONTACT DASHBOARD</a>
+            <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="block text-white bg-red-600 hover:bg-red-500 px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all text-center">
+                <i class="fa-solid fa-credit-card mr-1"></i> Payza Album Checkout
+            </a>
         </div>
     </header>
 
@@ -82,18 +89,53 @@
             <span class="bg-red-600 text-white text-[11px] font-extrabold uppercase px-2.5 py-1 rounded tracking-wider animate-pulse shrink-0">NEW ALBUMS V1 - V7</span>
             <div class="overflow-hidden whitespace-nowrap">
                 <p class="text-xs sm:text-sm font-medium text-red-100 tracking-wide inline-block animate-[marquee_20s_linear_infinite]">
-                    🔥 Stream Volumes v1 to v7 with toggle play/pause streaming. Click Album Artwork to reveal tracklists! 🎵
+                    🔥 Stream Volumes v1 to v7 with toggle play/pause streaming. Click Album Artwork to reveal tracklists! 🎵 Payza single track checkout now available!
                 </p>
             </div>
         </div>
     </div>
 
     <!-- MAIN CONTENT LAYOUT -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow">
+    <main id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow space-y-8">
+        
+        <!-- HERO INTRODUCTION SECTION -->
+        <section class="bg-gradient-to-r from-slate-900 via-slate-900/90 to-red-950/40 rounded-3xl border border-slate-800 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl p-1 bg-gradient-to-tr from-red-600 to-amber-500 shadow-xl shrink-0">
+                    <img src="about.png" alt="Phillip Lisomona" class="w-full h-full object-cover rounded-xl">
+                </div>
+                <div class="space-y-4 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-red-600/20 border border-red-500/30 px-3 py-1 rounded-full text-red-400 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                        <span>Official Artist Profile</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Phillip Lisomona</h1>
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-medium">
+                        Phillip Lisomona is a renowned gospel musician of the Seventh Day Adventist Church based in Lusaka, Zambia | a music producer and an Entrepreneur.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2 text-xs text-slate-300 font-semibold">
+                        <a href="tel:+260971132818" class="flex items-center space-x-2 bg-slate-950/80 border border-slate-700 hover:border-red-500 px-4 py-2 rounded-xl transition-colors">
+                            <i class="fa-solid fa-phone text-red-500"></i>
+                            <span>+260 971 132 818</span>
+                        </a>
+                        <a href="mailto:philliplisomonamusic@gmail.com" class="flex items-center space-x-2 bg-slate-950/80 border border-slate-700 hover:border-red-500 px-4 py-2 rounded-xl transition-colors">
+                            <i class="fa-solid fa-envelope text-red-500"></i>
+                            <span>philliplisomonamusic@gmail.com</span>
+                        </a>
+                        <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="flex items-center space-x-2 bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-xl transition-colors shadow-md">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <span>Payza Album Checkout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             <!-- LEFT 2 COLUMNS: Albums & Tracks Container -->
-            <div class="lg:col-span-2 space-y-6">
+            <div id="albums" class="lg:col-span-2 space-y-6">
                 
                 <!-- Category Filter Pills Bar -->
                 <div class="flex items-center justify-between flex-wrap gap-3 bg-slate-900/80 p-4 rounded-2xl border border-slate-800 shadow-md">
@@ -148,74 +190,193 @@
                     <h4 class="font-bold text-base text-white">Phillip Lisomona</h4>
                     <p class="text-xs text-red-400 font-medium mb-3">Gospel Artist & Producer</p>
                     <p class="text-xs text-slate-400 mb-4 leading-relaxed">Spreading the message of hope, faith, and inspiration through powerful gospel melodies and album releases.</p>
-                    <button onclick="openContactModal()" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30">
+                    <button onclick="openContactModal()" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30 mb-2">
                         Book / Contact Artist
                     </button>
+                    <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="block w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold uppercase transition-colors shadow-lg shadow-amber-600/30 text-center">
+                        Payza Album Checkout
+                    </a>
                 </div>
             </aside>
         </div>
+
+        <!-- CONTACT DASHBOARD SECTION -->
+        <section id="contact-dashboard" class="bg-gradient-to-br from-slate-900 via-slate-900 to-red-950/40 rounded-3xl border border-slate-800 p-6 sm:p-10 shadow-2xl">
+            <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
+                <span class="bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-extrabold uppercase px-3 py-1 rounded-full tracking-wider">Get in Touch</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white">Contact Dashboard</h2>
+                <p class="text-xs sm:text-sm text-slate-400">Reach out for bookings, gospel music collaborations, production inquiries, and ministry events.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Phone Card -->
+                <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 text-center space-y-4 hover:border-red-500/50 transition-colors shadow-lg">
+                    <div class="w-12 h-12 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center mx-auto text-xl shadow-inner">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Phone Number</h4>
+                        <p class="text-base font-bold text-white mt-1">+260 971 132 818</p>
+                    </div>
+                    <a href="tel:+260971132818" class="inline-block w-full py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30">
+                        Call Now
+                    </a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 text-center space-y-4 hover:border-red-500/50 transition-colors shadow-lg">
+                    <div class="w-12 h-12 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center mx-auto text-xl shadow-inner">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email Address</h4>
+                        <p class="text-sm font-bold text-white mt-1 truncate">philliplisomonamusic@gmail.com</p>
+                    </div>
+                    <a href="mailto:philliplisomonamusic@gmail.com" class="inline-block w-full py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30">
+                        Send Email
+                    </a>
+                </div>
+
+                <!-- Facebook Card -->
+                <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 text-center space-y-4 hover:border-red-500/50 transition-colors shadow-lg">
+                    <div class="w-12 h-12 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center mx-auto text-xl shadow-inner">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Facebook Page</h4>
+                        <p class="text-sm font-bold text-white mt-1 truncate">Philliplisomona</p>
+                    </div>
+                    <a href="https://www.facebook.com/Philliplisomona" target="_blank" class="inline-block w-full py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30">
+                        Visit Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- CUSTOM HTML5 BOTTOM AUDIO PLAYER BAR -->
-    <div id="audioPlayerBar" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 px-4 py-3 shadow-2xl transition-all duration-300 translate-y-full">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center space-x-3 w-full sm:w-1/4">
-                <img id="playerThumb" src="about.png" alt="Cover" class="w-12 h-12 rounded-xl object-cover shadow border border-slate-800">
-                <div class="overflow-hidden">
-                    <h4 id="playerTitle" class="text-xs sm:text-sm font-bold text-white truncate">Select a track to play</h4>
-                    <p id="playerArtist" class="text-[11px] text-red-400 truncate font-medium">Phillip Lisomona</p>
+                </div>
+                <h3 class="text-lg font-bold text-white">Secure Payment Gateway</h3>
+                <p class="text-xs text-slate-400">Support the ministry via Lipila or Lenco Pay Mobile Money & Card.</p>
+                
+                <!-- Payment Gateway & Method Tabs -->
+                <div class="grid grid-cols-2 gap-2 mt-4">
+                    <button type="button" onclick="switchGateway('lipila')" id="tabGatewayLipila" class="py-2 px-3 text-xs font-bold rounded-xl transition-all bg-red-600 text-white shadow">
+                        <i class="fa-solid fa-bolt mr-1"></i> Lipila Gateway
+                    </button>
+                    <button type="button" onclick="switchGateway('lenco')" id="tabGatewayLenco" class="py-2 px-3 text-xs font-bold rounded-xl transition-all bg-slate-950 border border-slate-800 text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-shield-halved mr-1"></i> Lenco Pay
+                    </button>
+                </div>
+
+                <div class="flex rounded-xl bg-slate-950 p-1 mt-2 border border-slate-800">
+                    <button type="button" onclick="switchPayMethod('momo')" id="tabMomo" class="flex-1 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-800 text-white">
+                        <i class="fa-solid fa-mobile-screen-button mr-1"></i> Mobile Money
+                    </button>
+                    <button type="button" onclick="switchPayMethod('card')" id="tabCard" class="flex-1 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-credit-card mr-1"></i> Bank Card
+                    </button>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center w-full sm:w-2/4 space-y-1">
-                <div class="flex items-center space-x-6">
-                    <button onclick="prevTrack()" class="text-slate-400 hover:text-white transition-colors text-sm"><i class="fa-solid fa-backward-step"></i></button>
-                    <button id="playPauseBtn" onclick="togglePlay()" class="w-10 h-10 rounded-full bg-red-600 hover:bg-red-500 text-white flex items-center justify-center shadow-lg shadow-red-600/40 transition-transform active:scale-95"><i class="fa-solid fa-play ml-0.5"></i></button>
-                    <button onclick="nextTrack()" class="text-slate-400 hover:text-white transition-colors text-sm"><i class="fa-solid fa-forward-step"></i></button>
+            <!-- MOBILE MONEY FORM (Lipila & Lenco) -->
+            <form id="momoForm" onsubmit="handleMomoPayment(event)" class="space-y-4">
+                <div id="lencoCredentialsBox" class="hidden space-y-3 p-3 rounded-xl bg-slate-950 border border-slate-800 text-left">
+                    <h5 class="text-[11px] font-bold text-amber-400 uppercase tracking-wider"><i class="fa-solid fa-key mr-1"></i> Lenco Pay Configuration</h5>
+                    <div>
+                        <label class="block text-[10px] font-semibold text-slate-400 mb-1">Lenco API URL</label>
+                        <input type="text" id="lencoApiUrl" value="https://api.lenco.co/access/v1/collections" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-semibold text-slate-400 mb-1">Lenco API Key / Token</label>
+                        <input type="text" id="lencoApiKey" placeholder="Bearer eyJhbGci..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
                 </div>
-                <div class="w-full flex items-center space-x-2 text-[10px] text-slate-400">
-                    <span id="currentTime">0:00</span>
-                    <input type="range" id="seekSlider" min="0" max="100" value="0" oninput="seekAudio(this.value)" class="w-full h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-500">
-                    <span id="durationTime">0:00</span>
-                </div>
-            </div>
 
-            <div class="hidden sm:flex items-center space-x-4 w-1/4 justify-end">
-                <div class="flex items-center space-x-2 text-slate-400">
-                    <i class="fa-solid fa-volume-high text-xs"></i>
-                    <input type="range" min="0" max="1" step="0.05" value="1" onchange="setVolume(this.value)" class="w-20 h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-500">
-                </div>
-                <button onclick="closePlayerBar()" class="text-slate-500 hover:text-slate-300 text-sm ml-2"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-        </div>
-    </div>
-
-    <!-- CONTACT MODAL -->
-    <div id="contactModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl relative">
-            <button onclick="closeContactModal()" class="absolute right-4 top-4 text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 rounded-full bg-red-600/20 text-red-500 flex items-center justify-center mx-auto mb-2 text-xl">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white">Contact Phillip Lisomona</h3>
-                <p class="text-xs text-slate-400">For bookings, events, and ministry inquiries.</p>
-            </div>
-            <form onsubmit="handleContactSubmit(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name</label>
-                    <input type="text" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500" placeholder="e.g. John Doe">
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Account Number (Phone)</label>
+                    <input type="text" id="lipilaAccount" value="260974101130" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500" placeholder="260974101130">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Amount (ZMW)</label>
+                        <input type="number" id="lipilaAmount" value="50" min="1" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Currency</label>
+                        <input type="text" id="lipilaCurrency" value="ZMW" readonly class="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-400 cursor-not-allowed">
+                    </div>
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
-                    <input type="email" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500" placeholder="e.g. john@example.com">
+                    <input type="email" id="lipilaEmail" value="lisotechinnovation@gmail.com" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Message / Inquiry</label>
-                    <textarea rows="3" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500" placeholder="Write your message here..."></textarea>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Narration / Purpose</label>
+                    <input type="text" id="lipilaNarration" value="Support Phillip Lisomona Music" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
                 </div>
-                <button type="submit" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase transition-colors shadow-lg shadow-red-600/30">
-                    Send Message
+                <button type="submit" id="momoSubmitBtn" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase transition-colors shadow-lg shadow-red-600/30 flex items-center justify-center space-x-2">
+                    <span id="momoBtnText">Pay Now via Lipila MoMo</span>
+                </button>
+            </form>
+
+            <!-- CARD PAYMENT FORM -->
+            <form id="cardForm" onsubmit="handleCardPayment(event)" class="space-y-4 hidden">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">First Name</label>
+                        <input type="text" id="cardFirstName" value="John" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Last Name</label>
+                        <input type="text" id="cardLastName" value="Doe" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+                        <input type="text" id="cardPhoneNumber" value="260974101130" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+                        <input type="email" id="cardEmail" value="test@gmail.com" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">City</label>
+                        <input type="text" id="cardCity" value="lusaka" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Country</label>
+                        <input type="text" id="cardCountry" value="ZM" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Zip Code</label>
+                        <input type="text" id="cardZip" value="10101" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Street Address</label>
+                    <input type="text" id="cardAddress" value="Matero plot number 23423" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Amount (ZMW)</label>
+                        <input type="number" id="cardAmount" value="50" min="1" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Currency</label>
+                        <input type="text" id="cardCurrency" value="ZMW" readonly class="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-400 cursor-not-allowed">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Narration / Purpose</label>
+                    <input type="text" id="cardNarration" value="test card transaction" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
+                </div>
+                <button type="submit" id="cardSubmitBtn" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase transition-colors shadow-lg shadow-red-600/30 flex items-center justify-center space-x-2">
+                    <span>Pay Now with Card</span>
                 </button>
             </form>
         </div>
@@ -234,15 +395,40 @@
         </div>
     </div>
 
+    <!-- PURCHASE PREVIEW LIMIT POPUP MODAL -->
+    <div id="previewLimitModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative text-center space-y-5 animate-in fade-in zoom-in duration-200">
+            <button onclick="closePreviewModal()" class="absolute right-4 top-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-red-600 flex items-center justify-center mx-auto shadow-lg text-white text-2xl">
+                <i class="fa-solid fa-compact-disc"></i>
+            </div>
+            <div class="space-y-2">
+                <span class="bg-amber-500/20 text-amber-400 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider">1-Minute Preview Ended</span>
+                <h3 class="text-xl font-black text-white">Enjoying this Track?</h3>
+                <p id="previewModalTrackName" class="text-xs text-slate-300 font-medium">You have reached the free 1-minute streaming limit. Purchase the full track or the entire album to keep listening without limits!</p>
+            </div>
+            <div class="space-y-3 pt-2">
+                <a href="https://payzaapi.co.ke/pay/78c331a83fdd08c1" target="_blank" onclick="closePreviewModal()" class="w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs uppercase transition-all shadow-lg shadow-amber-600/30 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Buy Single Track (Payza)</span>
+                </a>
+                <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" onclick="closePreviewModal()" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase transition-all shadow-lg shadow-red-600/30 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <span>Buy Whole Album (Payza)</span>
+                </a>
+            </div>
+            <button onclick="closePreviewModal()" class="text-xs text-slate-500 hover:text-slate-300 underline font-medium">Continue Browsing</button>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="bg-black border-t border-slate-900 py-8 text-center text-xs text-slate-500 mt-auto">
         <div class="max-w-7xl mx-auto px-4 space-y-4">
             <p class="font-semibold text-slate-400">© 2026 Phillip Lisomona Music. All Rights Reserved.</p>
             <div class="flex justify-center space-x-6 text-slate-400 text-sm">
-                <a href="#" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/Philliplisomona" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="mailto:philliplisomonamusic@gmail.com" class="hover:text-red-500 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:+260971132818" class="hover:text-red-500 transition-colors"><i class="fa-solid fa-phone"></i></a>
             </div>
             <p class="text-[10px] text-slate-600">Designed @LISOTECH INNOVATIONS.</p>
         </div>
@@ -385,7 +571,35 @@
         let isPlaying = false;
         let currentPlayingUrl = null;
         const audioElement = new Audio();
-        let expandedAlbums = { v1: true, v3: true, v4: true, v5: true, v6: true, v7: true }; // Keep Volume 1 expanded for easy viewing
+        let expandedAlbums = { v1: true, v3: true, v4: true, v5: true, v6: true, v7: true };
+        let activeGateway = 'lipila'; // 'lipila' or 'lenco'
+
+        // Lipila API Integration
+        const API_URL = 'https://api.lipila.io/v1/endpoint';
+        const API_KEY = 'lsk_01a02b5c-7491-7740-b5c1-eb05a20f6683';
+
+        async function callApi() {
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${API_KEY}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('API Response:', data);
+                return data;
+
+            } catch (error) {
+                console.warn('API endpoint info call simulated/CORS caught:', error.message);
+            }
+        }
 
         window.onload = function() {
             activePlaylist = albumsData.flatMap(album => album.tracks.map(t => ({
@@ -399,6 +613,9 @@
             
             audioElement.addEventListener('timeupdate', updateProgress);
             audioElement.addEventListener('ended', nextTrack);
+
+            // Execute Lipila API check
+            callApi();
         };
 
         function renderAlbums(list) {
@@ -416,12 +633,10 @@
                 return `
                 <div id="album-${album.id}" class="bg-slate-900 rounded-2xl border border-slate-800/80 overflow-hidden shadow-lg hover:border-red-500/50 transition-all flex flex-col justify-between sm:col-span-2">
                     <div>
-                        <!-- Album Header Banner: Natural image display with object-contain to show the full picture as it is -->
                         <div class="relative w-full bg-slate-950 flex items-center justify-center group cursor-pointer overflow-hidden p-2" onclick="toggleAlbumTracks('${album.id}')">
                             <img src="${album.img}" alt="${album.title}" width="500" height="500" class="max-h-96 w-auto object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 shadow-xl" onerror="this.src='https://placehold.co/500x500/1e293b/ef4444.png?text=Album'">
                         </div>
 
-                        <!-- Album Info & Action Bar -->
                         <div class="p-5 bg-gradient-to-t from-slate-900 via-slate-900/95 to-slate-900/80 border-t border-slate-800/60 flex items-center justify-between flex-wrap gap-3">
                             <div>
                                 <span class="bg-red-600 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-md shadow uppercase tracking-wider">${album.volume}</span>
@@ -429,10 +644,10 @@
                                 <p class="text-xs text-slate-300 font-medium">Phillip Lisomona • ${album.tracks.length} Tracks (Click to view tracklist)</p>
                             </div>
                             <div class="flex items-center space-x-2">
-                                <button onclick="event.stopPropagation(); window.open('${selarLink}', '_blank')" class="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-amber-600/30 flex items-center space-x-1.5">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                    <span>Buy this Album</span>
-                                </button>
+                                <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-amber-600/30 flex items-center space-x-1.5" title="Buy Album via Payza">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                    <span>Buy Album (Payza)</span>
+                                </a>
                                 <button onclick="toggleAlbumTracks('${album.id}')" class="bg-red-600/90 hover:bg-red-600 text-white px-3 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-red-600/40 flex items-center space-x-1">
                                     <span>${isExpanded ? 'Hide Tracks' : 'View Tracks'}</span>
                                     <i class="fa-solid fa-chevron-${isExpanded ? 'up' : 'down'}"></i>
@@ -440,7 +655,6 @@
                             </div>
                         </div>
 
-                        <!-- Expandable Tracks List Container with 'sirc' audio tags -->
                         <div id="tracks-container-${album.id}" class="${isExpanded ? 'block' : 'hidden'} p-4 space-y-2 bg-slate-950/90 border-t border-slate-800">
                             <h4 class="text-[11px] font-bold uppercase tracking-wider text-red-500 mb-2">Album Tracklist (${album.volume}) - Click Stream to Play/Pause</h4>
                             <div class="space-y-1.5">
@@ -451,12 +665,15 @@
                                         <div class="flex items-center space-x-3 overflow-hidden">
                                             <span class="text-xs font-bold text-slate-500 w-5 text-right">#${idx + 1}</span>
                                             <div class="overflow-hidden">
-                                                <!-- Audio source tag referenced as sirc -->
                                                 <h5 class="text-xs font-bold text-slate-200 truncate group-hover:text-red-400 transition-colors" sirc="${track.sirc}">${track.title}</h5>
                                                 <span class="text-[10px] text-slate-400 font-medium">${album.volume} • ${track.duration}</span>
                                             </div>
                                         </div>
                                         <div class="flex items-center space-x-2 shrink-0">
+                                            <a href="https://payzaapi.co.ke/pay/78c331a83fdd08c1" target="_blank" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold transition-colors shadow flex items-center space-x-1" title="Buy this track via Payza">
+                                                <i class="fa-solid fa-cart-shopping text-[10px]"></i>
+                                                <span>Buy Track</span>
+                                            </a>
                                             <button onclick="toggleTrackPlay('${album.id}', ${idx})" class="px-3 py-1.5 rounded-lg ${isThisPlaying ? 'bg-red-600 text-white' : 'bg-slate-800 group-hover:bg-red-600 text-slate-300 group-hover:text-white'} text-xs font-bold transition-colors shadow flex items-center space-x-1">
                                                 <i class="fa-solid fa-${isThisPlaying ? 'pause' : 'play'} text-[10px]"></i>
                                                 <span>${isThisPlaying ? 'Pause' : 'Stream'}</span>
@@ -545,6 +762,7 @@
 
         function loadAndPlayTrack(track) {
             audioElement.src = track.sirc;
+            audioElement.currentTime = 0;
             audioElement.play();
             isPlaying = true;
             currentPlayingUrl = track.sirc;
@@ -554,6 +772,10 @@
             document.getElementById('playerThumb').src = track.thumb;
             document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-pause"></i>';
             document.getElementById('audioPlayerBar').classList.remove('translate-y-full');
+            
+            // Set track name in preview limit modal
+            document.getElementById('previewModalTrackName').innerText = `You have reached the free 1-minute streaming limit for "${track.title}". Purchase the full track or entire album to enjoy uninterrupted playback!`;
+            
             renderAlbums(albumsData);
         }
 
@@ -614,16 +836,30 @@
 
         function updateProgress() {
             if (audioElement.duration) {
-                const progressPercent = (audioElement.currentTime / audioElement.duration) * 100;
+                // Enforce 1-minute (60 seconds) preview limit
+                if (audioElement.currentTime >= 60) {
+                    audioElement.pause();
+                    audioElement.currentTime = 0;
+                    isPlaying = false;
+                    document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-play ml-0.5"></i>';
+                    renderAlbums(albumsData);
+                    openPreviewModal();
+                    return;
+                }
+
+                // Show relative progress against 60 seconds preview limit
+                const previewLimit = Math.min(audioElement.duration, 60);
+                const progressPercent = (audioElement.currentTime / previewLimit) * 100;
                 document.getElementById('seekSlider').value = progressPercent;
                 document.getElementById('currentTime').innerText = formatTime(audioElement.currentTime);
-                document.getElementById('durationTime').innerText = formatTime(audioElement.duration);
+                document.getElementById('durationTime').innerText = formatTime(previewLimit) + ' (Limit)';
             }
         }
 
         function seekAudio(val) {
             if (audioElement.duration) {
-                audioElement.currentTime = (val / 100) * audioElement.duration;
+                const previewLimit = Math.min(audioElement.duration, 60);
+                audioElement.currentTime = (val / 100) * previewLimit;
             }
         }
 
@@ -645,31 +881,43 @@
             return `${m}:${s < 10 ? '0' : ''}${s}`;
         }
 
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('hidden');
-    }
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
 
-    function openContactModal() {
-        document.getElementById('contactModal').classList.remove('hidden');
-    }
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+        }
 
-    function closeContactModal() {
-        document.getElementById('contactModal').classList.add('hidden');
-    }
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+        }
 
-    function handleContactSubmit(e) {
-        e.preventDefault();
-        closeContactModal();
-        const toast = document.getElementById('toast');
-        document.getElementById('toastTitle').innerText = "Message Sent";
-        document.getElementById('toastMsg').innerText = "Phillip Lisomona's management team will contact you soon.";
-        toast.classList.remove('translate-y-20', 'opacity-0');
-        setTimeout(() => {
-            toast.classList.add('translate-y-20', 'opacity-0');
-        }, 4000);
-        e.target.reset();
-    }
-</script>
+        function openPreviewModal() {
+            document.getElementById('previewLimitModal').classList.remove('hidden');
+        }
+
+        function closePreviewModal() {
+            document.getElementById('previewLimitModal').classList.add('hidden');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            closeContactModal();
+            showToast("Message Sent", "Phillip Lisomona's management team will contact you soon.");
+            e.target.reset();
+        }
+
+        function showToast(title, msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastTitle').innerText = title;
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
