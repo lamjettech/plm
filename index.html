@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phillip Lisomona - Official Music Website</title>
+    <!-- Website Favicon Logo -->
+    <link rel="icon" type="image/png" href="about.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -43,8 +45,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-headphones text-white text-xl"></i>
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform border border-red-500/30">
+                        <img src="about.png" alt="Logo" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <span class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-red-500 via-amber-400 to-white bg-clip-text text-transparent">PHILLIP LISOMONA</span>
@@ -213,9 +215,10 @@
                     <h4 class="font-bold text-base text-white">Phillip Lisomona</h4>
                     <p class="text-xs text-red-400 font-medium mb-3">Gospel Artist & Producer</p>
                     <p class="text-xs text-slate-400 mb-4 leading-relaxed">Spreading the message of hope, faith, and inspiration through powerful gospel melodies and album releases.</p>
-                    <button onclick="openContactModal()" class="w-full py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30 mb-2">
-                        Book / Contact Artist
-                    </button>
+                    <!-- UPDATED BOOKING BUTTON TO WHATSAPP REDIRECT -->
+                    <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20would%20like%20to%20book%20you%20for%20an%20event%20/%20collaborate." target="_blank" class="block w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold uppercase transition-colors shadow-lg shadow-emerald-600/30 mb-2 text-center">
+                        <i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> Book via WhatsApp
+                    </a>
                     <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="block w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold uppercase transition-colors shadow-lg shadow-amber-600/30 text-center">
                         Payza Album Checkout
                     </a>
@@ -260,150 +263,23 @@
                     </a>
                 </div>
 
-                <!-- Facebook Card -->
-                <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 text-center space-y-4 hover:border-red-500/50 transition-colors shadow-lg">
-                    <div class="w-12 h-12 rounded-2xl bg-red-600/20 text-red-500 flex items-center justify-center mx-auto text-xl shadow-inner">
-                        <i class="fa-brands fa-facebook"></i>
+                <!-- WhatsApp Card / Booking Redirect -->
+                <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 text-center space-y-4 hover:border-emerald-500/50 transition-colors shadow-lg">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-600/20 text-emerald-500 flex items-center justify-center mx-auto text-xl shadow-inner">
+                        <i class="fa-brands fa-whatsapp"></i>
                     </div>
                     <div>
-                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Facebook Page</h4>
-                        <p class="text-sm font-bold text-white mt-1 truncate">Philliplisomona</p>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">WhatsApp Direct Booking</h4>
+                        <p class="text-sm font-bold text-white mt-1">+260 971 132 818</p>
                     </div>
-                    <a href="https://www.facebook.com/Philliplisomona" target="_blank" class="inline-block w-full py-2.5 bg-red-600 hover:bg-red-500 text-white rounded-xl text-xs font-bold uppercase transition-colors shadow-lg shadow-red-600/30">
-                        Visit Facebook
+                    <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20would%20like%20to%20book%20you%20for%20an%20event." target="_blank" class="inline-block w-full py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold uppercase transition-colors shadow-lg shadow-emerald-600/30">
+                        Chat on WhatsApp
                     </a>
                 </div>
             </div>
         </section>
 
     </main>
-
-    <!-- CUSTOM HTML5 BOTTOM AUDIO PLAYER BAR -->
-                </div>
-                <h3 class="text-lg font-bold text-white">Secure Payment Gateway</h3>
-                <p class="text-xs text-slate-400">Support the ministry via Lipila or Lenco Pay Mobile Money & Card.</p>
-                
-                <!-- Payment Gateway & Method Tabs -->
-                <div class="grid grid-cols-2 gap-2 mt-4">
-                    <button type="button" onclick="switchGateway('lipila')" id="tabGatewayLipila" class="py-2 px-3 text-xs font-bold rounded-xl transition-all bg-red-600 text-white shadow">
-                        <i class="fa-solid fa-bolt mr-1"></i> Lipila Gateway
-                    </button>
-                    <button type="button" onclick="switchGateway('lenco')" id="tabGatewayLenco" class="py-2 px-3 text-xs font-bold rounded-xl transition-all bg-slate-950 border border-slate-800 text-slate-400 hover:text-white">
-                        <i class="fa-solid fa-shield-halved mr-1"></i> Lenco Pay
-                    </button>
-                </div>
-
-                <div class="flex rounded-xl bg-slate-950 p-1 mt-2 border border-slate-800">
-                    <button type="button" onclick="switchPayMethod('momo')" id="tabMomo" class="flex-1 py-1.5 text-xs font-bold rounded-lg transition-all bg-slate-800 text-white">
-                        <i class="fa-solid fa-mobile-screen-button mr-1"></i> Mobile Money
-                    </button>
-                    <button type="button" onclick="switchPayMethod('card')" id="tabCard" class="flex-1 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-400 hover:text-white">
-                        <i class="fa-solid fa-credit-card mr-1"></i> Bank Card
-                    </button>
-                </div>
-            </div>
-
-            <!-- MOBILE MONEY FORM (Lipila & Lenco) -->
-            <form id="momoForm" onsubmit="handleMomoPayment(event)" class="space-y-4">
-                <div id="lencoCredentialsBox" class="hidden space-y-3 p-3 rounded-xl bg-slate-950 border border-slate-800 text-left">
-                    <h5 class="text-[11px] font-bold text-amber-400 uppercase tracking-wider"><i class="fa-solid fa-key mr-1"></i> Lenco Pay Configuration</h5>
-                    <div>
-                        <label class="block text-[10px] font-semibold text-slate-400 mb-1">Lenco API URL</label>
-                        <input type="text" id="lencoApiUrl" value="https://api.lenco.co/access/v1/collections" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-[10px] font-semibold text-slate-400 mb-1">Lenco API Key / Token</label>
-                        <input type="text" id="lencoApiKey" placeholder="Bearer eyJhbGci..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Account Number (Phone)</label>
-                    <input type="text" id="lipilaAccount" value="260974101130" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500" placeholder="260974101130">
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Amount (ZMW)</label>
-                        <input type="number" id="lipilaAmount" value="50" min="1" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Currency</label>
-                        <input type="text" id="lipilaCurrency" value="ZMW" readonly class="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-400 cursor-not-allowed">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
-                    <input type="email" id="lipilaEmail" value="lisotechinnovation@gmail.com" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Narration / Purpose</label>
-                    <input type="text" id="lipilaNarration" value="Support Phillip Lisomona Music" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                </div>
-                <button type="submit" id="momoSubmitBtn" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase transition-colors shadow-lg shadow-red-600/30 flex items-center justify-center space-x-2">
-                    <span id="momoBtnText">Pay Now via Lipila MoMo</span>
-                </button>
-            </form>
-
-            <!-- CARD PAYMENT FORM -->
-            <form id="cardForm" onsubmit="handleCardPayment(event)" class="space-y-4 hidden">
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">First Name</label>
-                        <input type="text" id="cardFirstName" value="John" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Last Name</label>
-                        <input type="text" id="cardLastName" value="Doe" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
-                        <input type="text" id="cardPhoneNumber" value="260974101130" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
-                        <input type="email" id="cardEmail" value="test@gmail.com" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                </div>
-                <div class="grid grid-cols-3 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">City</label>
-                        <input type="text" id="cardCity" value="lusaka" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Country</label>
-                        <input type="text" id="cardCountry" value="ZM" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Zip Code</label>
-                        <input type="text" id="cardZip" value="10101" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Street Address</label>
-                    <input type="text" id="cardAddress" value="Matero plot number 23423" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Amount (ZMW)</label>
-                        <input type="number" id="cardAmount" value="50" min="1" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Currency</label>
-                        <input type="text" id="cardCurrency" value="ZMW" readonly class="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-3 py-2 text-sm text-slate-400 cursor-not-allowed">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Narration / Purpose</label>
-                    <input type="text" id="cardNarration" value="test card transaction" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-red-500">
-                </div>
-                <button type="submit" id="cardSubmitBtn" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase transition-colors shadow-lg shadow-red-600/30 flex items-center justify-center space-x-2">
-                    <span>Pay Now with Card</span>
-                </button>
-            </form>
-        </div>
-    </div>
 
     <!-- TOAST NOTIFICATION -->
     <div id="toast" class="fixed bottom-28 right-4 z-50 bg-slate-900 border border-slate-700 rounded-2xl p-4 shadow-2xl transition-all duration-300 transform translate-y-20 opacity-0 max-w-sm">
@@ -451,7 +327,7 @@
             <div class="flex justify-center space-x-6 text-slate-400 text-sm">
                 <a href="https://www.facebook.com/Philliplisomona" target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-facebook"></i></a>
                 <a href="mailto:philliplisomonamusic@gmail.com" class="hover:text-red-500 transition-colors"><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:+260971132818" class="hover:text-red-500 transition-colors"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://wa.me/260971132818?text=Hello%20Phillip%20Lisomona,%20I%20would%20like%20to%20connect%20regarding%20your%20music." target="_blank" class="hover:text-red-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
             <p class="text-[10px] text-slate-600">Designed @LISOTECH INNOVATIONS.</p>
         </div>
@@ -588,41 +464,12 @@
             }
         ];
 
-        const selarLink = "https://selar.co/m/lisotech";
         let currentTrackIndex = 0;
         let activePlaylist = [];
         let isPlaying = false;
         let currentPlayingUrl = null;
         const audioElement = new Audio();
         let expandedAlbums = { v1: true, v3: true, v4: true, v5: true, v6: true, v7: true };
-        let activeGateway = 'lipila'; // 'lipila' or 'lenco'
-
-        // Lipila API Integration
-        const API_URL = 'https://api.lipila.io/v1/endpoint';
-        const API_KEY = 'lsk_01a02b5c-7491-7740-b5c1-eb05a20f6683';
-
-        async function callApi() {
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': `Bearer ${API_KEY}`,
-                        'Content-Type': 'application/json'
-                    }
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                console.log('API Response:', data);
-                return data;
-
-            } catch (error) {
-                console.warn('API endpoint info call simulated/CORS caught:', error.message);
-            }
-        }
 
         window.onload = function() {
             activePlaylist = albumsData.flatMap(album => album.tracks.map(t => ({
@@ -631,14 +478,9 @@
                 thumb: album.img,
                 category: "Album"
             })));
-
             renderAlbums(albumsData);
-            
             audioElement.addEventListener('timeupdate', updateProgress);
             audioElement.addEventListener('ended', nextTrack);
-
-            // Execute Lipila API check
-            callApi();
         };
 
         function renderAlbums(list) {
@@ -652,7 +494,6 @@
 
             grid.innerHTML = list.map((album) => {
                 const isExpanded = expandedAlbums[album.id] || false;
-                
                 return `
                 <div id="album-${album.id}" class="bg-slate-900 rounded-2xl border border-slate-800/80 overflow-hidden shadow-lg hover:border-red-500/50 transition-all flex flex-col justify-between sm:col-span-2">
                     <div>
@@ -722,9 +563,7 @@
             expandedAlbums[albumId] = true;
             renderAlbums(albumsData);
             const el = document.getElementById(`album-${albumId}`);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         function filterCategory(cat) {
@@ -735,7 +574,6 @@
                     btn.className = "cat-btn px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all bg-slate-800 text-slate-300 hover:bg-slate-700";
                 }
             });
-
             renderAlbums(albumsData);
         }
 
@@ -789,16 +627,6 @@
             audioElement.play();
             isPlaying = true;
             currentPlayingUrl = track.sirc;
-
-            document.getElementById('playerTitle').innerText = track.title;
-            document.getElementById('playerArtist').innerText = track.artist;
-            document.getElementById('playerThumb').src = track.thumb;
-            document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-pause"></i>';
-            document.getElementById('audioPlayerBar').classList.remove('translate-y-full');
-            
-            // Set track name in preview limit modal
-            document.getElementById('previewModalTrackName').innerText = `You have reached the free 1-minute streaming limit for "${track.title}". Purchase the full track or entire album to enjoy uninterrupted playback!`;
-            
             renderAlbums(albumsData);
         }
 
@@ -810,11 +638,9 @@
             if (isPlaying) {
                 audioElement.pause();
                 isPlaying = false;
-                document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-play ml-0.5"></i>';
             } else {
                 audioElement.play();
                 isPlaying = true;
-                document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-pause"></i>';
             }
             renderAlbums(albumsData);
         }
@@ -832,89 +658,21 @@
             });
         }
 
-        function prevTrack() {
-            if (activePlaylist.length === 0) return;
-            currentTrackIndex = (currentTrackIndex - 1 + activePlaylist.length) % activePlaylist.length;
-            const t = activePlaylist[currentTrackIndex];
-            currentPlayingUrl = t.sirc;
-            loadAndPlayTrack({
-                title: t.title,
-                artist: t.artist || "Phillip Lisomona",
-                thumb: t.thumb,
-                sirc: t.sirc
-            });
-        }
-
-        audioElement.addEventListener('pause', () => {
-            isPlaying = false;
-            document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-play ml-0.5"></i>';
-            renderAlbums(albumsData);
-        });
-
-        audioElement.addEventListener('play', () => {
-            isPlaying = true;
-            document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-pause"></i>';
-            renderAlbums(albumsData);
-        });
+        audioElement.addEventListener('pause', () => { isPlaying = false; renderAlbums(albumsData); });
+        audioElement.addEventListener('play', () => { isPlaying = true; renderAlbums(albumsData); });
 
         function updateProgress() {
-            if (audioElement.duration) {
-                // Enforce 1-minute (60 seconds) preview limit
-                if (audioElement.currentTime >= 60) {
-                    audioElement.pause();
-                    audioElement.currentTime = 0;
-                    isPlaying = false;
-                    document.getElementById('playPauseBtn').innerHTML = '<i class="fa-solid fa-play ml-0.5"></i>';
-                    renderAlbums(albumsData);
-                    openPreviewModal();
-                    return;
-                }
-
-                // Show relative progress against 60 seconds preview limit
-                const previewLimit = Math.min(audioElement.duration, 60);
-                const progressPercent = (audioElement.currentTime / previewLimit) * 100;
-                document.getElementById('seekSlider').value = progressPercent;
-                document.getElementById('currentTime').innerText = formatTime(audioElement.currentTime);
-                document.getElementById('durationTime').innerText = formatTime(previewLimit) + ' (Limit)';
+            if (audioElement.duration && audioElement.currentTime >= 60) {
+                audioElement.pause();
+                audioElement.currentTime = 0;
+                isPlaying = false;
+                renderAlbums(albumsData);
+                openPreviewModal();
             }
-        }
-
-        function seekAudio(val) {
-            if (audioElement.duration) {
-                const previewLimit = Math.min(audioElement.duration, 60);
-                audioElement.currentTime = (val / 100) * previewLimit;
-            }
-        }
-
-        function setVolume(val) {
-            audioElement.volume = val;
-        }
-
-        function closePlayerBar() {
-            audioElement.pause();
-            isPlaying = false;
-            currentPlayingUrl = null;
-            document.getElementById('audioPlayerBar').classList.add('translate-y-full');
-            renderAlbums(albumsData);
-        }
-
-        function formatTime(secs) {
-            const m = Math.floor(secs / 60);
-            const s = Math.floor(secs % 60);
-            return `${m}:${s < 10 ? '0' : ''}${s}`;
         }
 
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-
-        function openContactModal() {
-            document.getElementById('contactModal').classList.remove('hidden');
-        }
-
-        function closeContactModal() {
-            document.getElementById('contactModal').classList.add('hidden');
+            document.getElementById('mobileMenu').classList.toggle('hidden');
         }
 
         function openPreviewModal() {
@@ -923,23 +681,6 @@
 
         function closePreviewModal() {
             document.getElementById('previewLimitModal').classList.add('hidden');
-        }
-
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            closeContactModal();
-            showToast("Message Sent", "Phillip Lisomona's management team will contact you soon.");
-            e.target.reset();
-        }
-
-        function showToast(title, msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastTitle').innerText = title;
-            document.getElementById('toastMsg').innerText = msg;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 5000);
         }
     </script>
 </body>
