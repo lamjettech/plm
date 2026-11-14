@@ -335,12 +335,13 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        const albumsData = [
+                const albumsData = [
             {
                 id: "v1",
                 title: "Hena Ndileelela",
                 volume: "Volume 1",
                 img: "v1.jpg",
+                selar: "https://selar.com/jp66u77w10",
                 tracks: [
                     { title: "Hena Ndileelela ft Ashers Masempela & Orden Hamooya", duration: "3:45", sirc: "Hena-Ndileelela-ft-Ashers-Masempela-&-Orden-Hamooya.mp3" },
                     { title: "Tuyakuunka Phillip Lisomona", duration: "4:12", sirc: "Tuyakuunka-Phillip-Lisomona.mp3" },
@@ -357,6 +358,7 @@
                 title: "Katulyaambilila",
                 volume: "Volume 2",
                 img: "v2.jpg",
+                selar: "https://selar.com/5174w64166",
                 tracks: [
                     { title: "Katulyaambilila", duration: "4:00", sirc: "Katulyaambilila.mp3" },
                     { title: "Ndeelele kweenda mixdown", duration: "4:00", sirc: "Ndeelele-kweenda-mixdown.mp3" },
@@ -374,6 +376,7 @@
                 title: "Eyi Nyika",
                 volume: "Volume 3",
                 img: "v3.jpg",
+                selar: "https://selar.com/4hl16fs475",
                 tracks: [
                     { title: "Ndakulumba", duration: "4:00", sirc: "Ndakulumba.mp3" },
                     { title: "Phillip Lisomona ft Davies Mulaya Righteous Are You Lord", duration: "4:00", sirc: "Phillip-Lisomona-ft-Davies-Mulaya-Righteous-Are-You-Lord.mp3" },
@@ -392,6 +395,7 @@
                 title: "Nkukuli Nkomuzulilwa",
                 volume: "Volume 4",
                 img: "v4.jpg",
+                selar: "https://selar.com/896fz92d41",
                 tracks: [
                     { title: "Nyika Njotukede", duration: "4:00", sirc: "Nyika-Njotukede.mp3" },
                     { title: "Zioni Munzi", duration: "4:00", sirc: "Zioni-Munzi.mp3" },
@@ -410,6 +414,7 @@
                 title: "Ifisabo",
                 volume: "Volume 5",
                 img: "v5.jpg",
+                selar: "https://selar.com/257dwu14ya",
                 tracks: [
                     { title: "Phillip Lisomona Tuli fimuti", duration: "4:00", sirc: "Phillip-Lisomona-Tuli-fimuti.mp3" },
                     { title: "Phillip Lisomona Atunyamuke", duration: "4:00", sirc: "Phillip-Lisomona-Atunyamuke.mp3" },
@@ -429,6 +434,7 @@
                 title: "Praises to the Lord",
                 volume: "Volume 6",
                 img: "v6.jpg",
+                selar: "https://selar.com/695h6r1d52",
                 tracks: [
                     { title: "Jesu Ulandikwabilila", duration: "4:00", sirc: "Jesu-Ulandikwabilila.mp3" },
                     { title: "Praises to the Lord", duration: "4:00", sirc: "Praises-to-the-Lord.mp3" },
@@ -448,6 +454,7 @@
                 title: "Nkamuzhibe",
                 volume: "Volume 7",
                 img: "v7.jpg",
+                selar: "https://selar.com/i995692y25",
                 tracks: [
                     { title: "Nkamuzhibe", duration: "4:00", sirc: "Nkamuzhibe.mp3" },
                     { title: "Mbuli Jesu", duration: "4:00", sirc: "Mbuli-Jesu.mp3" },
@@ -508,9 +515,9 @@
                                 <p class="text-xs text-slate-300 font-medium">Phillip Lisomona • ${album.tracks.length} Tracks (Click to view tracklist)</p>
                             </div>
                             <div class="flex items-center space-x-2">
-                                <a href="https://payzaapi.co.ke/pay/82eef11c52f06829" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-amber-600/30 flex items-center space-x-1.5" title="Buy Album via Payza">
-                                    <i class="fa-solid fa-credit-card"></i>
-                                    <span>Buy Album (Payza)</span>
+                                <a href="${album.selar}" target="_blank" class="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-amber-600/30 flex items-center space-x-1.5" title="Buy Album on Selar">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span>Buy Album (Selar)</span>
                                 </a>
                                 <button onclick="toggleAlbumTracks('${album.id}')" class="bg-red-600/90 hover:bg-red-600 text-white px-3 py-2 rounded-xl text-xs font-bold transition-all shadow-lg shadow-red-600/40 flex items-center space-x-1">
                                     <span>${isExpanded ? 'Hide Tracks' : 'View Tracks'}</span>
